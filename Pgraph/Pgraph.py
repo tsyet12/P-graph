@@ -19,6 +19,7 @@ class Pgraph():
         self.gmatlist=[]
         self.goplist=[]
         self.goolist=[]
+        self.wine_installed=False #For Linux Only
     def plot_problem(self):
         G=self.G.copy()
         for n in G.nodes():
@@ -165,12 +166,13 @@ class Pgraph():
             rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
         elif system=="Linux":
             #try installing dependencies
-            if skip_wine==False:
+            if skip_wine==False and self.wine_installed==False:
                 print("Installing wine dependencies, this may take longer for the first time.")
                 os.system("apt-get install wine-stable")
                 os.system("dpkg --add-architecture i386")
                 os.system("apt-get update")
                 os.system("apt-get install wine32")
+                self.wine_installed=True
             out_string=" ".join(["wine",path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
             os.popen(out_string).read()
         ################
