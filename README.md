@@ -1,4 +1,4 @@
-# P-graph : Interfacing Process Graphs
+# Pgraph : Connecting Process Graphs to Modern Programming Ecosystems
 
 
 <!-- TABLE OF CONTENTS -->
