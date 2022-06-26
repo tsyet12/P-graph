@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-16"?>
+<PGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Type="PNS" Visible="true" PeriodExtension="true">
+  <Default>
+    <Material>
+      <FlowRateLowerBound>0</FlowRateLowerBound>
+      <FlowRateUpperBound>1000000000</FlowRateUpperBound>
+      <Price>0</Price>
+      <Type>1</Type>
+      <Deadline>31536000</Deadline>
+      <EarliestAvability>0</EarliestAvability>
+      <StorageStrategy>default</StorageStrategy>
+    </Material>
+    <OperatingUnit>
+      <OperatingFixCost>0</OperatingFixCost>
+      <InvestmentFixCost>0</InvestmentFixCost>
+      <OpUnitFixCost>0</OpUnitFixCost>
+      <OperatingPropCost>0</OperatingPropCost>
+      <InvestmentPropCost>0</InvestmentPropCost>
+      <OpUnitPropCost>0</OpUnitPropCost>
+      <CapacityLowerBound>0</CapacityLowerBound>
+      <CapacityUpperBound>1000000000</CapacityUpperBound>
+      <PaybackPeriod>10</PaybackPeriod>
+      <WorkingHoursPerYear>8000</WorkingHoursPerYear>
+      <FixOperTime>0</FixOperTime>
+      <PropOperTime>0</PropOperTime>
+      <EarliestAvability>0</EarliestAvability>
+      <LatestAvability>31536000</LatestAvability>
+      <RelaxMode>strong</RelaxMode>
+    </OperatingUnit>
+    <Edge>
+      <FlowRate>1</FlowRate>
+    </Edge>
+    <Quantity>
+      <default_mes>gram (g)</default_mes>
+      <time_mu>y</time_mu>
+      <quant_type>Mass</quant_type>
+      <money_mu>EUR</money_mu>
+    </Quantity>
+    <SolverParameter>
+      <MakespanCoefficient>0</MakespanCoefficient>
+      <CostCoefficient>1</CostCoefficient>
+      <TimeCoefficient>0</TimeCoefficient>
+      <TotalCostLowerBound>-1000000000</TotalCostLowerBound>
+      <TotalCostUpperBound>1000000000</TotalCostUpperBound>
+    </SolverParameter>
+  </Default>
+  <Materials>
+    <Material ID="1" Name="M1" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="-1" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="100" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="-1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="2" Name="M2" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="200" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="1" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="-1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="3" Name="M3" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="100" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="2" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="-1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+  </Materials>
+  <Edges>
+    <Edge ID="6" BeginID="2" EndID="4" Title="2" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="2">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="7" BeginID="4" EndID="1" Title="-3" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-3">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="8" BeginID="3" EndID="5" Title="4" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="4">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="9" BeginID="5" EndID="1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+  </Edges>
+  <OperatingUnits>
+    <OperatingUnit ID="4" Name="O1" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="2000" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="400" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="5" Name="O2" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="1000" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="400" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+  </OperatingUnits>
+  <MutualExclusions>
+    <MutualExclusion ID="10" Name="O1_O2">
+      <OperatingUnits>
+        <OperatingUnit>O1</OperatingUnit>
+        <OperatingUnit>O2</OperatingUnit>
+      </OperatingUnits>
+    </MutualExclusion>
+  </MutualExclusions>
+  <Solutions>
+    <Solutions Index="0" Title="Solution #1" OptimalValue="28666.7" TotalTime="0" TotalMakespan="0" ObjectiveValue="28666.7" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="100" Cost="-0" MU=""/>
+        <Material Name="M2" Flow="-66.6667" Cost="13333.3" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O1" Size="33.3333" Cost="15333.3" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="1" Title="Solution #2" OptimalValue="81000" TotalTime="0" TotalMakespan="0" ObjectiveValue="81000" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="100" Cost="-0" MU=""/>
+        <Material Name="M3" Flow="-400" Cost="40000" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="100" Cost="41000" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+  </Solutions>
+</PGraph>
