@@ -1,0 +1,34 @@
+file_type=PNS_problem_v1
+file_name=Graph_1
+
+measurement_units:
+mass_unit=t
+time_unit=y
+money_unit=USD
+
+defaults:
+material_type=raw_material
+material_flow_rate_lower_bound=0
+material_flow_rate_upper_bound=10000
+material_price=0
+operating_unit_capacity_lower_bound=0
+operating_unit_capacity_upper_bound=10000
+operating_unit_fix_cost=0
+operating_unit_proportional_cost=0
+
+materials:
+M1: product, flow_rate_lower_bound=100
+M2: raw_material, price=200, flow_rate_lower_bound=1
+M3: raw_material, price=100, flow_rate_lower_bound=2
+
+operating_units:
+O1: fix_cost=2000, proportional_cost=400
+O2: fix_cost=1000, proportional_cost=400
+
+material_to_operating_unit_flow_rates:
+O1: 2 M2 => 3 M1
+O2: 4 M3 => 1 M1
+
+mutually_exlcusive_sets_of_operating_units:
+ME0: O1, O2
+
