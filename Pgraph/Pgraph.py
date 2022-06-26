@@ -623,9 +623,9 @@ class Pgraph():
             print("Generated P-graph Studio File at ", path)
         return header+xml    
         
-    def run(self):
+    def run(self,system=None,skip_wine=False):
         self.convert_problem()
-        self.solve()
+        self.solve(system=system,skip_wine=skip_wine)
         self.read_solution()
         
     def get_info(self):
