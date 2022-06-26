@@ -258,7 +258,7 @@ class Pgraph():
         plt.rc('figure',figsize=(5,10))
         label_options = {"ec": "k", "fc": "white", "alpha": 0.5}
         edges=H.edges()
-        weights = [G[u][v]['weight'] for u,v in edges]
+        weights = [H[u][v]['weight'] for u,v in edges]
         labels = nx.get_edge_attributes(H,'weight')
         labels={k:round(v,2) for k,v in labels.items()}
         labels_flow=nx.get_node_attributes(H,'Flow')
@@ -330,8 +330,9 @@ class Pgraph():
         gmatlist=self.gmatlist
         goplist=self.goplist
         goolist=self.goolist
+        ME= self.ME
         if path==None:
-            path= os.path.dirname(__file__)+"\\"
+            path= os.path.dirname(__file__)+"/"
         header=r'<?xml version="1.0" encoding="utf-16"?>'+"\n"
         xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsd="http://www.w3.org/2001/XMLSchema"

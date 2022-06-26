@@ -1,0 +1,4 @@
+include Pgraph/solver/*.dll
+include Pgraph/solver/*.exe
+include Pgraph/solver/*.out
+include Pgraph/solver/*.in
