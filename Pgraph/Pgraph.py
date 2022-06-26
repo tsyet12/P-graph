@@ -13,7 +13,7 @@ class Pgraph():
         self.ME=mutual_exclusion
         self.solver=solver
         self.max_sol=max_sol
-        self.path=os.path.dirname(os.path.realpath(__file__))+r"\\solver\\"
+        self.path=os.path.dirname(os.path.realpath(__file__))+r"/solver/"
         self.gmatlist=[]
         self.goplist=[]
         self.goolist=[]
