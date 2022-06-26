@@ -47,6 +47,7 @@ class Pgraph():
         ax.autoscale()
         ax.set_xlim([0.75*ax.get_xlim()[0],1.1*ax.get_xlim()[1]])
         ax.set_ylim([0.75*ax.get_ylim()[0],1.1*ax.get_ylim()[1]])
+        ax.set_title("Original Problem ",y=0.95)
         return ax
     
     def convert_problem(self):
@@ -146,7 +147,7 @@ class Pgraph():
             for line in prelines:
                 f.write(line)
 
-    def solve(self,system=None):
+    def solve(self,system=None,skip_wine=False):
         ###RUN SOLVER##########
         '''
         Arguments:
@@ -164,11 +165,12 @@ class Pgraph():
             rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
         elif system=="Linux":
             #try installing dependencies
-            print("Installing wine dependencies, this may take longer for the first time.")
-            os.system("apt-get install wine-stable")
-            os.system("dpkg --add-architecture i386")
-            os.system("apt-get update")
-            os.system("apt-get install wine32")
+            if skip_wine==False:
+                print("Installing wine dependencies, this may take longer for the first time.")
+                os.system("apt-get install wine-stable")
+                os.system("dpkg --add-architecture i386")
+                os.system("apt-get update")
+                os.system("apt-get install wine32")
             out_string=" ".join(["wine",path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
             os.popen(out_string).read()
         ################
@@ -199,7 +201,7 @@ class Pgraph():
         for i in range(len(lines)):
             if lines[i][:18]=="Feasible structure":
                 sol_start_index.append(i)
-                print(lines[i][19:-1])
+                #print(lines[i][19:-1])
 
         sol_start_index.append(len(lines)-1)
 
@@ -247,7 +249,7 @@ class Pgraph():
                         glist=glist.split()
                         toplist.append(glist)
                 if comp_ind==2:
-                    print(sol_list[i][j])
+                    #print(sol_list[i][j])
                     goolist.append(sol_list[i][j].split()[3])
                 s=False
             goplist.append(toplist)
