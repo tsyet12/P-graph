@@ -15,10 +15,10 @@ if os.path.isfile(requirementPath):
         install_requires = f.read().splitlines()
 
 
-setup(name='P-graph', 
+setup(name='Pgraph', 
 version='1.0', 
 license='BSD 2-Clause',
-description="Interface for Python to P-graph",
+description="Connecting Process Network Synthesis (PNS) to Modern Programming Ecosystems",
 author='Sin Yong Teng',
 long_description=long_description,
 long_description_content_type="text/markdown",
