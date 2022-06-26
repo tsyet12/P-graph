@@ -42,6 +42,17 @@ class Pgraph():
         nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black', with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=12)
         for aShape in nodeShapes:
             nx.draw_networkx_nodes(G,pos=pos2,node_color='black',node_shape = aShape, nodelist = [sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,G.nodes(data = True))],node_size=3000)
+        
+        
+        for key, values in nx.get_node_attributes(G,'type').items():
+            if values=="raw_material":
+                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=1600)
+            elif values=="product":
+                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=2000)
+                nx.draw_networkx_nodes(G,pos=pos,node_color='black',node_shape = 'o', nodelist = [key],node_size=1250)
+                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=750)
+                
+                
         nx.draw_networkx_edge_labels(G, pos=pos,edge_labels=labels)
         ax= plt.gca()
         plt.axis('off')
@@ -332,6 +343,15 @@ class Pgraph():
             node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
             for node in node_list:
                 nx.draw_networkx_nodes(H,pos=pos2,node_color=H.nodes()[node]['color'],node_shape = aShape, nodelist =[node] ,node_size=3000) 
+        
+        for key, values in nx.get_node_attributes(H,'type').items():
+            if values=="raw_material":
+                nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=1600)
+            elif values=="product":
+                nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=2000)
+                nx.draw_networkx_nodes(H,pos=pos,node_color='black',node_shape = 'o', nodelist = [key],node_size=1250)
+                nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=750)
+        
         nx.draw_networkx_edge_labels(H, pos=pos,edge_labels=labels)
         ax= plt.gca()
         plt.axis('off')
