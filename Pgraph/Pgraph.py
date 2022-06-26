@@ -167,7 +167,7 @@ class Pgraph():
         elif system=="Linux":
             #try installing dependencies
             if skip_wine==False and self.wine_installed==False:
-                print("Installing wine dependencies, this may take longer for the first time.")
+                print("Installing wine dependencies (only for Linux), this may take longer for the first time. Use skip_wine=True if you are sure wine is installed.")
                 os.system("apt-get install wine-stable")
                 os.system("dpkg --add-architecture i386")
                 os.system("apt-get update")
