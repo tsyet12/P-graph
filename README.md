@@ -1,4 +1,4 @@
-# Pgraph : Connecting Process Graphs to Modern Programming Ecosystems
+# Pgraph : Connecting Process Network Synthesis (PNS) to Modern Programming Ecosystems
 
 
 <!-- TABLE OF CONTENTS -->
