@@ -6,6 +6,8 @@ import math
 from networkx.drawing.nx_pydot import pydot_layout
 from lxml import etree
 import networkx as nx
+import platform
+
 
 class Pgraph():
     def __init__(self, problem_network, mutual_exclusion, solver="INSIDEOUT",max_sol=100):
@@ -144,7 +146,7 @@ class Pgraph():
             for line in prelines:
                 f.write(line)
 
-    def solve(self):
+    def solve(self,system=None):
         ###RUN SOLVER##########
         '''
         Arguments:
@@ -155,7 +157,20 @@ class Pgraph():
         max_sol=self.max_sol
         solver=self.solver
         solver_dict={0:"MSG",1:"SSG",2:"SSGLP",3:"INSIDEOUT"}
-        rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
+        if system==None:
+            system=platform.system()
+            
+        if system=="Windows": #support for windows
+            rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
+        elif system=="Linux":
+            #try installing dependencies
+            print("Installing wine dependencies, this may take longer for the first time.")
+            os.system("apt-get install wine-stable")
+            os.system("dpkg --add-architecture i386")
+            os.system("apt-get update")
+            os.system("apt-get install wine32")
+            out_string=" ".join(["wine",path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
+            os.popen(out_string).read()
         ################
     
     def read_solution(self):

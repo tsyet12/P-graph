@@ -1,8 +1,9 @@
-from Pgraph.Pgraph import Pgraph
-import matplotlib.pyplot as plt
-import networkx as nx
 
 if __name__=="__main__":
+    from Pgraph.Pgraph import Pgraph
+    import matplotlib.pyplot as plt
+    import networkx as nx
+    import os
     ### Prepare Network Structure #############
     G = nx.DiGraph()
     G.add_node("M1",type='product',flow_rate_lower_bound=100)
@@ -25,4 +26,6 @@ if __name__=="__main__":
         plt.show()
     
     P.to_studio(verbose=True)
+    import platform
+    print(platform.system()=="Windows")
     
