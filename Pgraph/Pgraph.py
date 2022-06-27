@@ -11,6 +11,11 @@ import platform
 
 class Pgraph():
     def __init__(self, problem_network, mutual_exclusion, solver="INSIDEOUT",max_sol=100):
+        #In case names is not specified, revert to symbol of graph
+        for n in problem_network:
+            if 'names' not in list(G.nodes()[n].keys()):
+                G.nodes()[n]['names']=n
+            
         self.G=problem_network
         self.ME=mutual_exclusion
         self.solver=solver
@@ -28,25 +33,34 @@ class Pgraph():
             else:
                 G.nodes[n]['s']='o'
         plt.rc('figure',figsize=(5,10))
-        label_options = {"ec": "k", "fc": "white", "alpha": 0.5}
+        label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
         edges=G.edges()
         weights = [G[u][v]['weight'] for u,v in edges]
         labels = nx.get_edge_attributes(G,'weight')
         labels={k:round(v,2) for k,v in labels.items()}
+        node_labels={n:G.nodes()[n]['names']  for n in G.nodes()}
+
         nodeShapes = set((aShape[1]["s"] for aShape in G.nodes(data = True)))
         pos=pydot_layout(G,prog='dot')
         pos2=pydot_layout(G,prog='dot')
         for key, (v1,v2) in pos2.items():
             if key[0]=="O":
                 pos2[key]=(v1,v2-3)
-        nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black', with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=12)
+            
+        
+        nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=12)
         for aShape in nodeShapes:
-            nx.draw_networkx_nodes(G,pos=pos2,node_color='black',node_shape = aShape, nodelist = [sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,G.nodes(data = True))],node_size=3000)
+            if aShape=="o":
+                node_size=3000
+            else:
+                node_size=6000
+            nx.draw_networkx_nodes(G,pos=pos2,node_color='black',node_shape = aShape, nodelist = [sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,G.nodes(data = True))],node_size=node_size)
         
         
         for key, values in nx.get_node_attributes(G,'type').items():
             if values=="raw_material":
                 nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=1600)
+                
             elif values=="product":
                 nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=2000)
                 nx.draw_networkx_nodes(G,pos=pos,node_color='black',node_shape = 'o', nodelist = [key],node_size=1250)
@@ -59,7 +73,7 @@ class Pgraph():
         ax.autoscale()
         ax.set_xlim([0.75*ax.get_xlim()[0],1.1*ax.get_xlim()[1]])
         ax.set_ylim([0.75*ax.get_ylim()[0],1.1*ax.get_ylim()[1]])
-        ax.set_title("Original Problem ",y=0.95)
+        ax.set_title("Original Problem ",y=0.90)
         return ax
     
     def convert_problem(self):
@@ -95,7 +109,7 @@ class Pgraph():
                 for k,v in G.nodes[n].items():
                     if k=='type':
                         add_list[0]=add_list[0]+v
-                    else:
+                    elif k!="names":
                         add_list.append(str(k)+"="+str(v))
                 n_=", ".join(add_list)
                 prelines.append(n_)
@@ -112,10 +126,10 @@ class Pgraph():
                 for k,v in G.nodes[n].items():
                     if k=='type':
                         add_list[0]=add_list[0]+v
-                    elif len(add_list)==1 and first:
+                    elif len(add_list)==1 and first and k!="names":
                         add_list[0]=add_list[0]+str(k)+"="+str(v)
                         first=False
-                    else:
+                    elif k!="names":
                         add_list.append(str(k)+"="+str(v))
                 n_=", ".join(add_list)
                 prelines.append(n_)
@@ -286,7 +300,7 @@ class Pgraph():
         nx.set_node_attributes(H,attr_op)
         nx.set_node_attributes(H,attr_mat)
         plt.rc('figure',figsize=(5,10))
-        label_options = {"ec": "k", "fc": "white", "alpha": 0.5}
+        label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
         edges=H.edges()
         weights = [H[u][v]['weight'] for u,v in edges]
         labels = nx.get_edge_attributes(H,'weight')
@@ -297,7 +311,7 @@ class Pgraph():
         all_node=list(set(list(labels_flow.keys())+list(labels_cap.keys())+list(labels_cost.keys())))
         labels1={}
         for x in all_node:
-            string=x
+            string=H.nodes()[x]['names']
             if labels_flow.get(x) is not None:
                 string=string+"\nFlow="+str(labels_flow.get(x))
             
@@ -337,12 +351,15 @@ class Pgraph():
             if key[0]=="O":
                 pos2[key]=(v1,v2-3)
 
-            
         nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=10)
         for aShape in nodeShapes:
             node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
+            if aShape=="o":
+                node_size=3000
+            else:
+                node_size=6000
             for node in node_list:
-                nx.draw_networkx_nodes(H,pos=pos2,node_color=H.nodes()[node]['color'],node_shape = aShape, nodelist =[node] ,node_size=3000) 
+                nx.draw_networkx_nodes(H,pos=pos2,node_color=H.nodes()[node]['color'],node_shape = aShape, nodelist =[node] ,node_size=node_size) 
         
         for key, values in nx.get_node_attributes(H,'type').items():
             if values=="raw_material":
@@ -360,7 +377,7 @@ class Pgraph():
         ax.set_xlim([0.75*ax.get_xlim()[0],1.1*ax.get_xlim()[1]])
         ax.set_ylim([0.75*ax.get_ylim()[0],1.1*ax.get_ylim()[1]])
         ax.set_aspect('equal', adjustable='box')
-        ax.set_title("Solution #"+str(sol_num+1)+" Total Costs="+str(goolist[sol_num]),y=0.95)
+        ax.set_title("Solution #"+str(sol_num+1)+" Total Costs="+str(goolist[sol_num]),y=0.90)
         return ax
     
     def to_studio(self, path=None,verbose=False):
@@ -655,11 +672,11 @@ class Pgraph():
 if __name__=="__main__":
     ### Prepare Network Structure #############
     G = nx.DiGraph()
-    G.add_node("M1",type='product',flow_rate_lower_bound=100)
-    G.add_node("M2",type='raw_material',price=200,flow_rate_lower_bound=1)
-    G.add_node("M3",type='raw_material',price=100,flow_rate_lower_bound=2)
-    G.add_node("O1",fix_cost=2000, proportional_cost=400)
-    G.add_node("O2",fix_cost=1000, proportional_cost=400)
+    G.add_node("M1",names="Product A",type='product',flow_rate_lower_bound=100)
+    G.add_node("M2",names="Chemical A",type='raw_material',price=200,flow_rate_lower_bound=1)
+    G.add_node("M3",names="Chemical B", type='raw_material',price=100,flow_rate_lower_bound=2)
+    G.add_node("O1",names="Reactor A",fix_cost=2000, proportional_cost=400)
+    G.add_node("O2", names="Reactor B",fix_cost=1000, proportional_cost=400)
     G.add_edge("O1","M1", weight = 3) 
     G.add_edge("O2","M1", weight = 1) 
     G.add_edge("M2","O1", weight = 2)
