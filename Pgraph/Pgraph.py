@@ -13,8 +13,8 @@ class Pgraph():
     def __init__(self, problem_network, mutual_exclusion, solver="INSIDEOUT",max_sol=100):
         #In case names is not specified, revert to symbol of graph
         for n in problem_network:
-            if 'names' not in list(G.nodes()[n].keys()):
-                G.nodes()[n]['names']=n
+            if 'names' not in list(problem_network.nodes()[n].keys()):
+                problem_network.nodes()[n]['names']=n
             
         self.G=problem_network
         self.ME=mutual_exclusion
