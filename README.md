@@ -47,8 +47,6 @@ pip install git+
 ## Example Recipe
 
 
-# Tutorial/Useful Examples
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
