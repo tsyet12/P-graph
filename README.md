@@ -8,7 +8,7 @@
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
-* [Usage](#usage)
+* [Example Code](#usage-example)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
