@@ -24,16 +24,11 @@
 ```bat
 pip install 
 ```
-## Install the Most Updated Version (Recommended)
-### Install on Google Colab:
-In a [`Colab`](https://colab.research.google.com) code block:
-```bat
-!pip install git+
-```
-### Install on local python environment:
+## Install most updated version from Github
+
 In a environment terminal or CMD:
 ```bat
-pip install git+
+pip install git+https://github.com/tsyet12/Pgraph
 ```
 
 
