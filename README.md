@@ -23,9 +23,9 @@ This project aims at enabling the classical P-graph Framework (www.p-graph.org) 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Install this library.
+Install this library either from the official pypi or from this Github repository:
 
-## Install a Stable Version
+## Install a Stable Version (pypi)
 ```bat
 pip install 
 ```
