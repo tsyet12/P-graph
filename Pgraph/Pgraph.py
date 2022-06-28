@@ -371,7 +371,7 @@ class Pgraph():
                 nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=1600)
             elif values=="product":
                 nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=2000)
-                nx.draw_networkx_nodes(H,pos=pos,node_color=H.nodes()[node]['color'],node_shape = 'o', nodelist = [key],node_size=1250)
+                nx.draw_networkx_nodes(H,pos=pos,node_color=H.nodes()[key]['color'],node_shape = 'o', nodelist = [key],node_size=1250)
                 nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=750)
         
         nx.draw_networkx_edge_labels(H, pos=pos,edge_labels=labels)
