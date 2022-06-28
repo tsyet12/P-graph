@@ -37,7 +37,8 @@ pip install git+https://github.com/tsyet12/Pgraph
 
 
 <!-- USAGE EXAMPLES -->
-## Example Recipe
+
+
 
 
 <!-- CONTRIBUTING -->
