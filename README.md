@@ -37,8 +37,9 @@ In a environment terminal or CMD:
 pip install git+https://github.com/tsyet12/Pgraph
 ```
 
-<!-- USAGE EXAMPLES -->
 
+<!-- USAGE EXAMPLES -->
+## Example Code
 See [`examples`](https://github.com/tsyet12/Pgraph/tree/main/examples).
 
 <!-- CONTRIBUTING -->
