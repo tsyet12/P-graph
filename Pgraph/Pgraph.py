@@ -299,7 +299,7 @@ class Pgraph():
         attr_mat={x[0]:{"Flow":x[3],"Cost":x[1]} for x in gmatlist[sol_num]}
         nx.set_node_attributes(H,attr_op)
         nx.set_node_attributes(H,attr_mat)
-        plt.rc('figure',figsize=figsize))
+        plt.rc('figure',figsize=figsize)
         label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
         edges=H.edges()
         weights = [H[u][v]['weight'] for u,v in edges]
