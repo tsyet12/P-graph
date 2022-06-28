@@ -5,9 +5,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-* [Current support for algorithms](#current-support-for-algorithms)
 * [Getting Started](#getting-started)
-  * [Dependencies](#dependencies)
   * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
