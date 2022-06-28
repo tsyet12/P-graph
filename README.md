@@ -11,7 +11,7 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [References](#references)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -68,5 +68,11 @@ Main Developer:
 Sin Yong Teng sinyong.teng@ru.nl or tsyet12@gmail.com
 Radboud University Nijmegen
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+<!-- References -->
+## References
+
+Friedler, F., Tarjan, K., Huang, Y.W. and Fan, L.T., 1992. Graph-theoretic approach to process synthesis: axioms and theorems. Chemical Engineering Science, 47(8), pp.1973-1988.
+
+Friedler, F., Tarjan, K., Huang, Y.W. and Fan, L.T., 1992. Combinatorial algorithms for process synthesis. Computers & chemical engineering, 16, pp.S313-S320.
+
+Friedler, F., Tarjan, K., Huang, Y.W. and Fan, L.T., 1993. Graph-theoretic approach to process synthesis: polynomial algorithm for maximal structure generation. Computers & Chemical Engineering, 17(9), pp.929-942.
