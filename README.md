@@ -1,5 +1,4 @@
 # Pgraph : Process Graphs for Process Network Synthesis (PNS)
-## Python Interface
 
 ![Pgraphlogo](https://user-images.githubusercontent.com/19692103/176261331-5ec5fd1d-eec6-467c-b79c-ed48691eecfb.png)
 
