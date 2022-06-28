@@ -25,14 +25,14 @@ class Pgraph():
         self.goplist=[]
         self.goolist=[]
         self.wine_installed=False #For Linux Only
-    def plot_problem(self):
+    def plot_problem(self,figsize=(5,10)):
         G=self.G.copy()
         for n in G.nodes():
             if n[0]=="O":
                 G.nodes[n]['s']=mpl.markers.MarkerStyle(marker='s', fillstyle='top')
             else:
                 G.nodes[n]['s']='o'
-        plt.rc('figure',figsize=(5,10))
+        plt.rc('figure',figsize=figsize)
         label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
         edges=G.edges()
         weights = [G[u][v]['weight'] for u,v in edges]
@@ -284,7 +284,7 @@ class Pgraph():
         self.goplist=goplist
         self.gmatlist=gmatlist
         self.goolist=goolist
-    def plot_solution(self,sol_num=0):
+    def plot_solution(self,sol_num=0,figsize=(5,10)):
         sol_num=sol_num
         H=self.G.copy()
         gmatlist=self.gmatlist
@@ -299,7 +299,7 @@ class Pgraph():
         attr_mat={x[0]:{"Flow":x[3],"Cost":x[1]} for x in gmatlist[sol_num]}
         nx.set_node_attributes(H,attr_op)
         nx.set_node_attributes(H,attr_mat)
-        plt.rc('figure',figsize=(5,10))
+        plt.rc('figure',figsize=figsize))
         label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
         edges=H.edges()
         weights = [H[u][v]['weight'] for u,v in edges]
