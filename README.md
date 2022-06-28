@@ -40,7 +40,8 @@ pip install git+https://github.com/tsyet12/Pgraph
 <!-- USAGE EXAMPLES -->
 ## Example Code
 See [`examples`](https://github.com/tsyet12/Pgraph/tree/main/examples) for code examples.
-![Example](https://user-images.githubusercontent.com/19692103/176264519-40d81813-4422-4f05-a5b2-cc800cdbf75d.png)
+
+![example](https://user-images.githubusercontent.com/19692103/176265167-3e41b536-9f2b-48df-b559-9290277065e7.png)
 
 <!-- CONTRIBUTING -->
 ## Contributing
