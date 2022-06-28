@@ -27,7 +27,7 @@ Install this library either from the official pypi or from this Github repositor
 
 ## Install a Stable Version (pypi)
 ```bat
-pip install 
+pip install ProcessGraph
 ```
 ## Install most updated version from Github
 
