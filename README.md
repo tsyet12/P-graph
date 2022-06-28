@@ -1,5 +1,6 @@
 # Pgraph : Connecting Process Network Synthesis (PNS) to Modern Programming Ecosystems
 
+![Pgraphlogo](https://user-images.githubusercontent.com/19692103/176261331-5ec5fd1d-eec6-467c-b79c-ed48691eecfb.png)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -16,7 +17,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This project aims at enabling the classical P-graph Framework (www.p-graph.org) to interface with modern Python programming ecosystems. The backend solver is the original executable from P-graph, staying true to the original implementation of P-graph. For manual network manipulation, the P-graph studio can be downloaded from this link: https://p-graph.org/downloads/. 
 
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+Install this library.
 
 ## Install a Stable Version
 ```bat
@@ -29,17 +37,9 @@ In a environment terminal or CMD:
 pip install git+https://github.com/tsyet12/Pgraph
 ```
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-
-
-
 <!-- USAGE EXAMPLES -->
 
-
-
+See [`examples`](https://github.com/tsyet12/Pgraph/tree/main/examples).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -57,7 +57,6 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Distributed under the Open Sourced BSD-2-Clause License. See [`LICENSE`](https://github.com/tsyet12/Chemsy/blob/main/LICENSE) for more information.
-
 
 
 <!-- CONTACT -->
