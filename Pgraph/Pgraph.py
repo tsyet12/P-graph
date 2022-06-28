@@ -10,7 +10,7 @@ import platform
 
 
 class Pgraph():
-    def __init__(self, problem_network, mutual_exclusion, solver="INSIDEOUT",max_sol=100):
+    def __init__(self, problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100):
         #In case names is not specified, revert to symbol of graph
         for n in problem_network:
             if 'names' not in list(problem_network.nodes()[n].keys()):
@@ -25,7 +25,7 @@ class Pgraph():
         self.goplist=[]
         self.goolist=[]
         self.wine_installed=False #For Linux Only
-    def plot_problem(self,figsize=(5,10)):
+    def plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True):
         G=self.G.copy()
         for n in G.nodes():
             if n[0]=="O":
@@ -47,7 +47,8 @@ class Pgraph():
             if key[0]=="O":
                 pos2[key]=(v1,v2-3)
             
-        
+        pos=nx.rescale_layout_dict(pos,scale=rescale)
+        pos2=nx.rescale_layout_dict(pos2,scale=rescale)
         nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=12)
         for aShape in nodeShapes:
             if aShape=="o":
@@ -71,9 +72,11 @@ class Pgraph():
         ax= plt.gca()
         plt.axis('off')
         ax.autoscale()
-        ax.set_xlim([0.75*ax.get_xlim()[0],1.1*ax.get_xlim()[1]])
-        ax.set_ylim([0.75*ax.get_ylim()[0],1.1*ax.get_ylim()[1]])
-        ax.set_title("Original Problem ",y=0.90)
+        ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
+        ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
+        if box:
+            ax.set_aspect('equal', adjustable='box')
+        ax.set_title("Original Problem ",y=titlepos)
         return ax
     
     def convert_problem(self):
@@ -248,7 +251,6 @@ class Pgraph():
             tmatlist=[]
             toplist=[]
             for j in range(len(sol_list[i])):
-                #print(sol_list[i][j])
                 if sol_list[i][j][:len(comp[0])]==comp[0]:
                     comp_ind=0
                     s=True
@@ -284,7 +286,7 @@ class Pgraph():
         self.goplist=goplist
         self.gmatlist=gmatlist
         self.goolist=goolist
-    def plot_solution(self,sol_num=0,figsize=(5,10)):
+    def plot_solution(self,sol_num=0,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True):
         sol_num=sol_num
         H=self.G.copy()
         gmatlist=self.gmatlist
@@ -313,7 +315,7 @@ class Pgraph():
         for x in all_node:
             string=H.nodes()[x]['names']
             if labels_flow.get(x) is not None:
-                string=string+"\nFlow="+str(labels_flow.get(x))
+                string=string+"\nFlow="+str(abs(float(labels_flow.get(x))))
             
             if labels_cap.get(x) is not None:
                 string=string+"\nCap.="+str(labels_cap.get(x))
@@ -347,10 +349,13 @@ class Pgraph():
 
         pos=pydot_layout(H,prog='dot')
         pos2=pydot_layout(H,prog='dot')
+        
+
         for key, (v1,v2) in pos2.items():
             if key[0]=="O":
                 pos2[key]=(v1,v2-3)
-
+        pos=nx.rescale_layout_dict(pos,scale=rescale)
+        pos2=nx.rescale_layout_dict(pos2,scale=rescale)
         nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=10)
         for aShape in nodeShapes:
             node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
@@ -366,7 +371,7 @@ class Pgraph():
                 nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=1600)
             elif values=="product":
                 nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=2000)
-                nx.draw_networkx_nodes(H,pos=pos,node_color='black',node_shape = 'o', nodelist = [key],node_size=1250)
+                nx.draw_networkx_nodes(H,pos=pos,node_color=H.nodes()[node]['color'],node_shape = 'o', nodelist = [key],node_size=1250)
                 nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=750)
         
         nx.draw_networkx_edge_labels(H, pos=pos,edge_labels=labels)
@@ -374,10 +379,11 @@ class Pgraph():
         plt.axis('off')
         ax.autoscale()
 
-        ax.set_xlim([0.75*ax.get_xlim()[0],1.1*ax.get_xlim()[1]])
-        ax.set_ylim([0.75*ax.get_ylim()[0],1.1*ax.get_ylim()[1]])
-        ax.set_aspect('equal', adjustable='box')
-        ax.set_title("Solution #"+str(sol_num+1)+" Total Costs="+str(goolist[sol_num]),y=0.90)
+        ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
+        ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
+        if box:
+            ax.set_aspect('equal', adjustable='box')
+        ax.set_title("Solution #"+str(sol_num+1)+" Total Costs="+str(goolist[sol_num]),y=titlepos)
         return ax
     
     def to_studio(self, path=None,verbose=False):
@@ -536,7 +542,7 @@ class Pgraph():
                 ee=G.in_edges(n)
                 for e in ee:
                     ratio=G[e[0]][e[1]]['weight']
-                    attr={"ID":str(global_edge_count),"BeginID":str(list(G.nodes()).index(e[0])+1),"EndID":str(list(G.nodes()).index(e[1])+1),"Title":str(ratio), "ArrowOnCenter":"true","ArrowPosition":"50"}
+                    attr={"ID":str(global_edge_count),"BeginID":str(list(G.nodes()).index(e[0])+1),"EndID":str(list(G.nodes()).index(e[1])+1),"Rate":str(ratio),"Title":str(ratio), "ArrowOnCenter":"true","ArrowPosition":"50"}
                     edge_list.append(etree.SubElement(Edges,'Edge', attrib=attr))
                     nodes_list.append(etree.SubElement(edge_list[-1],'Nodes')) #Hanging
                     label_list.append(etree.SubElement(edge_list[-1],'Label',attrib={"Text":str(ratio)}))
@@ -556,7 +562,7 @@ class Pgraph():
                 ff=G.out_edges(n)
                 for f in ff:
                     ratio=-G[f[0]][f[1]]['weight']
-                    attr={"ID":str(global_edge_count),"BeginID":str(list(G.nodes()).index(f[0])+1),"EndID":str(list(G.nodes()).index(f[1])+1),"Title":str(ratio), "ArrowOnCenter":"true","ArrowPosition":"50"}
+                    attr={"ID":str(global_edge_count),"BeginID":str(list(G.nodes()).index(f[0])+1),"EndID":str(list(G.nodes()).index(f[1])+1),"Rate":str(ratio),"Title":str(ratio), "ArrowOnCenter":"true","ArrowPosition":"50"}
                     edge_list.append(etree.SubElement(Edges,'Edge', attrib=attr))
                     nodes_list.append(etree.SubElement(edge_list[-1],'Nodes')) #Hanging
                     label_list.append(etree.SubElement(edge_list[-1],'Label',attrib={"Text":str(ratio)}))
@@ -670,6 +676,8 @@ class Pgraph():
     def get_sol_num(self):
         return len(self.goolist)
 if __name__=="__main__":
+    '''
+    ##TEST1########################################
     ### Prepare Network Structure #############
     G = nx.DiGraph()
     G.add_node("M1",names="Product A",type='product',flow_rate_lower_bound=100)
@@ -692,4 +700,63 @@ if __name__=="__main__":
         plt.show()
     
     P.to_studio(verbose=True)
+    #####################################
+    '''
     
+    ## TEST 2 ###################
+    from sklearn.datasets import load_diabetes
+    from chemsy.predict import *
+    from sklearn.preprocessing import MinMaxScaler
+    diabetes = load_diabetes()
+    X, y = diabetes.data, diabetes.target
+    xscaler=MinMaxScaler()
+    yscaler=MinMaxScaler()
+
+    X=xscaler.fit_transform(X)
+    y=yscaler.fit_transform(y.reshape(-1, 1))
+
+    model=PartialLeastSquaresCV()
+    model.fit(X,y)
+    B=model.model.coef_ #Get B vector of PLSCV
+
+    ##### STEP 1 : Problem Specification ######
+    G = nx.DiGraph()
+    G.add_node("M1",names="combine",type='intermediate',flow_rate_lower_bound=0, flow_rate_upper_bound=0,price=0)
+    global_count=2
+    for i in range(B.shape[0]):
+      if B[i][0]>=0:
+        G.add_node("M"+str(global_count),names=diabetes.feature_names[i],type='raw_material',flow_rate_lower_bound=0, flow_rate_upper_bound=1,price=0)
+        G.add_node("O"+str(global_count),names=diabetes.feature_names[i])
+        G.add_edge("M"+str(global_count),"O"+str(global_count), weight = 1, prices=0)
+        G.add_edge("O"+str(global_count),"M1", weight = B[i][0])
+        global_count=global_count+1
+      else:
+        G.add_node("M"+str(global_count),names=diabetes.feature_names[i],type='product',flow_rate_lower_bound=0, flow_rate_upper_bound=1,price=0)
+        G.add_node("O"+str(global_count),names=diabetes.feature_names[i])
+        G.add_edge("O"+str(global_count),"M"+str(global_count), weight = 1, price=0)
+        G.add_edge("M1","O"+str(global_count), weight = -B[i][0])
+        global_count=global_count+1
+
+    G.add_node("O"+str(global_count),names="sum")  
+    G.add_edge("M1","O"+str(global_count), weight = 1)
+    G.add_edge("O"+str(global_count),"M"+str(global_count+1), weight = 1)
+    global_count=global_count+1
+    G.add_node("M"+str(global_count),names="Prediction",type='product',price=100,flow_rate_lower_bound=0, flow_rate_upper_bound=10000)
+
+    #### Step 2:  Setup Solver ####
+    P=Pgraph(problem_network=G,  solver="INSIDEOUT",max_sol=100)
+    ###############################
+    ax1=P.plot_problem(figsize=(20,20))
+
+    plt.show()
+    #### Step 3: Run ####
+    P.run()
+    ####################
+    #### Step 3.1: Plot Solution########
+    total_sol_num=P.get_sol_num() 
+    for i in range(3): # Here we plot top 3 solutions
+        ax=P.plot_solution(sol_num=i,figsize=(20,20)) #Plot Solution Function
+        #ax.set_xlim(-100,800)
+        plt.show()
+    #####################################  '''
+    P.to_studio()
