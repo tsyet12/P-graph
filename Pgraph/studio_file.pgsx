@@ -45,38 +45,119 @@
     </SolverParameter>
   </Default>
   <Materials>
-    <Material ID="1" Name="M1" Type="2">
+    <Material ID="1" Name="M1" Type="1">
       <ParameterList>
-        <Parameter Name="price" Prefix="Price: " Value="-1" Visible="false"/>
-        <Parameter Name="reqflow" Prefix="Required flow: " Value="100" Visible="false"/>
-        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="-1" Visible="false"/>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="0" Visible="false"/>
         <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
         <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
       </ParameterList>
     </Material>
     <Material ID="2" Name="M2" Type="0">
       <ParameterList>
-        <Parameter Name="price" Prefix="Price: " Value="200" Visible="false"/>
-        <Parameter Name="reqflow" Prefix="Required flow: " Value="1" Visible="false"/>
-        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="-1" Visible="false"/>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
         <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
         <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
       </ParameterList>
     </Material>
-    <Material ID="3" Name="M3" Type="0">
+    <Material ID="4" Name="M3" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="6" Name="M4" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="8" Name="M5" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="10" Name="M6" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="12" Name="M7" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="14" Name="M8" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="16" Name="M9" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="18" Name="M10" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="20" Name="M11" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="23" Name="M13" Type="2">
       <ParameterList>
         <Parameter Name="price" Prefix="Price: " Value="100" Visible="false"/>
-        <Parameter Name="reqflow" Prefix="Required flow: " Value="2" Visible="false"/>
-        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="-1" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="10000" Visible="false"/>
         <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
         <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
       </ParameterList>
     </Material>
   </Materials>
   <Edges>
-    <Edge ID="6" BeginID="2" EndID="4" Title="2" ArrowOnCenter="true" ArrowPosition="50">
+    <Edge ID="24" BeginID="2" EndID="3" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
       <Nodes/>
-      <Label Text="2">
+      <Label Text="1">
         <Offset>
           <X>0</X>
           <Y>0</Y>
@@ -89,9 +170,9 @@
       <Comment/>
       <CommentVisible>false</CommentVisible>
     </Edge>
-    <Edge ID="7" BeginID="4" EndID="1" Title="-3" ArrowOnCenter="true" ArrowPosition="50">
+    <Edge ID="25" BeginID="3" EndID="1" Rate="-0.00129097128059724" Title="-0.00129097128059724" ArrowOnCenter="true" ArrowPosition="50">
       <Nodes/>
-      <Label Text="-3">
+      <Label Text="-0.00129097128059724">
         <Offset>
           <X>0</X>
           <Y>0</Y>
@@ -104,9 +185,9 @@
       <Comment/>
       <CommentVisible>false</CommentVisible>
     </Edge>
-    <Edge ID="8" BeginID="3" EndID="5" Title="4" ArrowOnCenter="true" ArrowPosition="50">
+    <Edge ID="26" BeginID="1" EndID="5" Rate="0.07038017535259315" Title="0.07038017535259315" ArrowOnCenter="true" ArrowPosition="50">
       <Nodes/>
-      <Label Text="4">
+      <Label Text="0.07038017535259315">
         <Offset>
           <X>0</X>
           <Y>0</Y>
@@ -119,7 +200,277 @@
       <Comment/>
       <CommentVisible>false</CommentVisible>
     </Edge>
-    <Edge ID="9" BeginID="5" EndID="1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+    <Edge ID="27" BeginID="5" EndID="4" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="28" BeginID="6" EndID="7" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="29" BeginID="7" EndID="1" Rate="-0.4312251962637329" Title="-0.4312251962637329" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.4312251962637329">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="30" BeginID="8" EndID="9" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="31" BeginID="9" EndID="1" Rate="-0.25746704735601533" Title="-0.25746704735601533" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.25746704735601533">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="32" BeginID="1" EndID="11" Rate="0.06749885224867033" Title="0.06749885224867033" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="0.06749885224867033">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="33" BeginID="11" EndID="10" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="34" BeginID="1" EndID="13" Rate="0.10820265887404185" Title="0.10820265887404185" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="0.10820265887404185">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="35" BeginID="13" EndID="12" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="36" BeginID="1" EndID="15" Rate="0.17148366718034525" Title="0.17148366718034525" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="0.17148366718034525">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="37" BeginID="15" EndID="14" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="38" BeginID="16" EndID="17" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="39" BeginID="17" EndID="1" Rate="-0.09368365205852416" Title="-0.09368365205852416" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.09368365205852416">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="40" BeginID="18" EndID="19" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="41" BeginID="19" EndID="1" Rate="-0.37704934185899297" Title="-0.37704934185899297" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.37704934185899297">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="42" BeginID="20" EndID="21" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="43" BeginID="21" EndID="1" Rate="-0.06121633907840375" Title="-0.06121633907840375" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.06121633907840375">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="44" BeginID="1" EndID="22" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="45" BeginID="22" EndID="23" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
       <Nodes/>
       <Label Text="-1">
         <Offset>
@@ -136,24 +487,132 @@
     </Edge>
   </Edges>
   <OperatingUnits>
-    <OperatingUnit ID="4" Name="O1" Title="">
+    <OperatingUnit ID="3" Name="O2" Title="">
       <ParameterList>
         <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
         <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
-        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="2000" Visible="false"/>
-        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="400" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
         <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
         <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
         <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
         <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
       </ParameterList>
     </OperatingUnit>
-    <OperatingUnit ID="5" Name="O2" Title="">
+    <OperatingUnit ID="5" Name="O3" Title="">
       <ParameterList>
         <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
         <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
-        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="1000" Visible="false"/>
-        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="400" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="7" Name="O4" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="9" Name="O5" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="11" Name="O6" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="13" Name="O7" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="15" Name="O8" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="17" Name="O9" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="19" Name="O10" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="21" Name="O11" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="22" Name="O12" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
         <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
         <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
         <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
@@ -162,37 +621,1730 @@
     </OperatingUnit>
   </OperatingUnits>
   <MutualExclusions>
-    <MutualExclusion ID="10" Name="O1_O2">
-      <OperatingUnits>
-        <OperatingUnit>O1</OperatingUnit>
-        <OperatingUnit>O2</OperatingUnit>
-      </OperatingUnits>
+    <MutualExclusion ID="46" Name="">
+      <OperatingUnits/>
     </MutualExclusion>
   </MutualExclusions>
   <Solutions>
-    <Solutions Index="0" Title="Solution #1" OptimalValue="28666.7" TotalTime="0" TotalMakespan="0" ObjectiveValue="28666.7" AlgorithmUsed="INSIDEOUT">
+    <Solutions Index="0" Title="Solution #1" OptimalValue="-122.193" TotalTime="0" TotalMakespan="0" ObjectiveValue="-122.193" AlgorithmUsed="INSIDEOUT">
       <Materials>
-        <Material Name="M1" Flow="100" Cost="-0" MU=""/>
-        <Material Name="M2" Flow="-66.6667" Cost="13333.3" MU=""/>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.22193" Cost="-122.193" MU=""/>
       </Materials>
       <OperatingUnits>
-        <OperatingUnit Name="O1" Size="33.3333" Cost="15333.3" MU="">
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.22193" Cost="0" MU="">
           <Input/>
           <Output/>
         </OperatingUnit>
       </OperatingUnits>
     </Solutions>
-    <Solutions Index="1" Title="Solution #2" OptimalValue="81000" TotalTime="0" TotalMakespan="0" ObjectiveValue="81000" AlgorithmUsed="INSIDEOUT">
+    <Solutions Index="1" Title="Solution #2" OptimalValue="-122.064" TotalTime="0" TotalMakespan="0" ObjectiveValue="-122.064" AlgorithmUsed="INSIDEOUT">
       <Materials>
-        <Material Name="M1" Flow="100" Cost="-0" MU=""/>
-        <Material Name="M3" Flow="-400" Cost="40000" MU=""/>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.22064" Cost="-122.064" MU=""/>
       </Materials>
       <OperatingUnits>
-        <OperatingUnit Name="O2" Size="100" Cost="41000" MU="">
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.22064" Cost="0" MU="">
           <Input/>
           <Output/>
         </OperatingUnit>
       </OperatingUnits>
+    </Solutions>
+    <Solutions Index="2" Title="Solution #3" OptimalValue="-116.072" TotalTime="0" TotalMakespan="0" ObjectiveValue="-116.072" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.16072" Cost="-116.072" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.16072" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="3" Title="Solution #4" OptimalValue="-115.943" TotalTime="0" TotalMakespan="0" ObjectiveValue="-115.943" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.15943" Cost="-115.943" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.15943" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="4" Title="Solution #5" OptimalValue="-112.825" TotalTime="0" TotalMakespan="0" ObjectiveValue="-112.825" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.12825" Cost="-112.825" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.12825" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="5" Title="Solution #6" OptimalValue="-112.696" TotalTime="0" TotalMakespan="0" ObjectiveValue="-112.696" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.12696" Cost="-112.696" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.12696" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="6" Title="Solution #7" OptimalValue="-106.703" TotalTime="0" TotalMakespan="0" ObjectiveValue="-106.703" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.06703" Cost="-106.703" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.06703" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="7" Title="Solution #8" OptimalValue="-106.574" TotalTime="0" TotalMakespan="0" ObjectiveValue="-106.574" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="1.06574" Cost="-106.574" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="1.06574" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="8" Title="Solution #9" OptimalValue="-96.4466" TotalTime="0" TotalMakespan="0" ObjectiveValue="-96.4466" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.964466" Cost="-96.4466" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.964466" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="9" Title="Solution #10" OptimalValue="-96.3175" TotalTime="0" TotalMakespan="0" ObjectiveValue="-96.3175" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.963175" Cost="-96.3175" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.963175" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="10" Title="Solution #11" OptimalValue="-90.3249" TotalTime="0" TotalMakespan="0" ObjectiveValue="-90.3249" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.903249" Cost="-90.3249" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.903249" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="11" Title="Solution #12" OptimalValue="-90.1958" TotalTime="0" TotalMakespan="0" ObjectiveValue="-90.1958" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.901958" Cost="-90.1958" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.901958" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="12" Title="Solution #13" OptimalValue="-87.0782" TotalTime="0" TotalMakespan="0" ObjectiveValue="-87.0782" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.870782" Cost="-87.0782" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.870782" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="13" Title="Solution #14" OptimalValue="-86.9491" TotalTime="0" TotalMakespan="0" ObjectiveValue="-86.9491" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.869491" Cost="-86.9491" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.869491" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="14" Title="Solution #15" OptimalValue="-84.4883" TotalTime="0" TotalMakespan="0" ObjectiveValue="-84.4883" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.844883" Cost="-84.4883" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.844883" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="15" Title="Solution #16" OptimalValue="-84.3592" TotalTime="0" TotalMakespan="0" ObjectiveValue="-84.3592" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.843592" Cost="-84.3592" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.843592" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="16" Title="Solution #17" OptimalValue="-80.9566" TotalTime="0" TotalMakespan="0" ObjectiveValue="-80.9566" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.809566" Cost="-80.9566" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.809566" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="17" Title="Solution #18" OptimalValue="-80.8275" TotalTime="0" TotalMakespan="0" ObjectiveValue="-80.8275" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.808275" Cost="-80.8275" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.808275" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="18" Title="Solution #19" OptimalValue="-79.0707" TotalTime="0" TotalMakespan="0" ObjectiveValue="-79.0707" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.790707" Cost="-79.0707" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.790707" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="19" Title="Solution #20" OptimalValue="-78.9416" TotalTime="0" TotalMakespan="0" ObjectiveValue="-78.9416" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.789416" Cost="-78.9416" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.789416" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="20" Title="Solution #21" OptimalValue="-78.3667" TotalTime="0" TotalMakespan="0" ObjectiveValue="-78.3667" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.783667" Cost="-78.3667" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.783667" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="21" Title="Solution #22" OptimalValue="-78.2376" TotalTime="0" TotalMakespan="0" ObjectiveValue="-78.2376" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.782376" Cost="-78.2376" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.782376" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="22" Title="Solution #23" OptimalValue="-75.12" TotalTime="0" TotalMakespan="0" ObjectiveValue="-75.12" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.7512" Cost="-75.12" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.7512" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="23" Title="Solution #24" OptimalValue="-74.9909" TotalTime="0" TotalMakespan="0" ObjectiveValue="-74.9909" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.749909" Cost="-74.9909" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.749909" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="24" Title="Solution #25" OptimalValue="-72.9491" TotalTime="0" TotalMakespan="0" ObjectiveValue="-72.9491" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.729491" Cost="-72.9491" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.729491" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="25" Title="Solution #26" OptimalValue="-72.82" TotalTime="0" TotalMakespan="0" ObjectiveValue="-72.82" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.7282" Cost="-72.82" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.7282" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="26" Title="Solution #27" OptimalValue="-69.7024" TotalTime="0" TotalMakespan="0" ObjectiveValue="-69.7024" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.697024" Cost="-69.7024" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.697024" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="27" Title="Solution #28" OptimalValue="-69.5733" TotalTime="0" TotalMakespan="0" ObjectiveValue="-69.5733" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.695733" Cost="-69.5733" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.695733" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="28" Title="Solution #29" OptimalValue="-68.9983" TotalTime="0" TotalMakespan="0" ObjectiveValue="-68.9983" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.689983" Cost="-68.9983" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.689983" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="29" Title="Solution #30" OptimalValue="-68.8692" TotalTime="0" TotalMakespan="0" ObjectiveValue="-68.8692" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.688692" Cost="-68.8692" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.688692" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="30" Title="Solution #31" OptimalValue="-63.5807" TotalTime="0" TotalMakespan="0" ObjectiveValue="-63.5807" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.635807" Cost="-63.5807" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.635807" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="31" Title="Solution #32" OptimalValue="-63.4516" TotalTime="0" TotalMakespan="0" ObjectiveValue="-63.4516" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.634516" Cost="-63.4516" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.634516" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="32" Title="Solution #33" OptimalValue="-58.7416" TotalTime="0" TotalMakespan="0" ObjectiveValue="-58.7416" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.587416" Cost="-58.7416" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.587416" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="33" Title="Solution #34" OptimalValue="-58.6125" TotalTime="0" TotalMakespan="0" ObjectiveValue="-58.6125" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.586125" Cost="-58.6125" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.586125" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="34" Title="Solution #35" OptimalValue="-53.324" TotalTime="0" TotalMakespan="0" ObjectiveValue="-53.324" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.53324" Cost="-53.324" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.53324" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="35" Title="Solution #36" OptimalValue="-53.1949" TotalTime="0" TotalMakespan="0" ObjectiveValue="-53.1949" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.531949" Cost="-53.1949" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.531949" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="36" Title="Solution #37" OptimalValue="-52.62" TotalTime="0" TotalMakespan="0" ObjectiveValue="-52.62" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.5262" Cost="-52.62" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.5262" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="37" Title="Solution #38" OptimalValue="-52.4909" TotalTime="0" TotalMakespan="0" ObjectiveValue="-52.4909" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.524909" Cost="-52.4909" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.524909" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="38" Title="Solution #39" OptimalValue="-49.3733" TotalTime="0" TotalMakespan="0" ObjectiveValue="-49.3733" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.493733" Cost="-49.3733" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.493733" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="39" Title="Solution #40" OptimalValue="-49.2442" TotalTime="0" TotalMakespan="0" ObjectiveValue="-49.2442" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.492442" Cost="-49.2442" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.492442" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="40" Title="Solution #41" OptimalValue="-47.2024" TotalTime="0" TotalMakespan="0" ObjectiveValue="-47.2024" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.472024" Cost="-47.2024" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.472024" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="41" Title="Solution #42" OptimalValue="-47.0733" TotalTime="0" TotalMakespan="0" ObjectiveValue="-47.0733" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.470733" Cost="-47.0733" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.470733" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="42" Title="Solution #43" OptimalValue="-43.9557" TotalTime="0" TotalMakespan="0" ObjectiveValue="-43.9557" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.439557" Cost="-43.9557" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.439557" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="43" Title="Solution #44" OptimalValue="-43.8266" TotalTime="0" TotalMakespan="0" ObjectiveValue="-43.8266" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.438266" Cost="-43.8266" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.438266" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="44" Title="Solution #45" OptimalValue="-43.2516" TotalTime="0" TotalMakespan="0" ObjectiveValue="-43.2516" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.432516" Cost="-43.2516" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.432516" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="45" Title="Solution #46" OptimalValue="-43.1225" TotalTime="0" TotalMakespan="0" ObjectiveValue="-43.1225" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M4" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.431225" Cost="-43.1225" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O4" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.431225" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="46" Title="Solution #47" OptimalValue="-41.3658" TotalTime="0" TotalMakespan="0" ObjectiveValue="-41.3658" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.413658" Cost="-41.3658" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.413658" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="47" Title="Solution #48" OptimalValue="-41.2367" TotalTime="0" TotalMakespan="0" ObjectiveValue="-41.2367" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.412367" Cost="-41.2367" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.412367" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="48" Title="Solution #49" OptimalValue="-37.834" TotalTime="0" TotalMakespan="0" ObjectiveValue="-37.834" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.37834" Cost="-37.834" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.37834" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="49" Title="Solution #50" OptimalValue="-37.7049" TotalTime="0" TotalMakespan="0" ObjectiveValue="-37.7049" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M10" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.377049" Cost="-37.7049" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O10" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.377049" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="50" Title="Solution #51" OptimalValue="-35.2442" TotalTime="0" TotalMakespan="0" ObjectiveValue="-35.2442" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.352442" Cost="-35.2442" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.352442" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="51" Title="Solution #52" OptimalValue="-35.1151" TotalTime="0" TotalMakespan="0" ObjectiveValue="-35.1151" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.351151" Cost="-35.1151" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.351151" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="52" Title="Solution #53" OptimalValue="-31.9974" TotalTime="0" TotalMakespan="0" ObjectiveValue="-31.9974" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.319974" Cost="-31.9974" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.319974" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="53" Title="Solution #54" OptimalValue="-31.8683" TotalTime="0" TotalMakespan="0" ObjectiveValue="-31.8683" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.318683" Cost="-31.8683" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.318683" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="54" Title="Solution #55" OptimalValue="-25.8758" TotalTime="0" TotalMakespan="0" ObjectiveValue="-25.8758" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.258758" Cost="-25.8758" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.258758" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="55" Title="Solution #56" OptimalValue="-25.7467" TotalTime="0" TotalMakespan="0" ObjectiveValue="-25.7467" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M5" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.257467" Cost="-25.7467" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O5" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.257467" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="56" Title="Solution #57" OptimalValue="-15.6191" TotalTime="0" TotalMakespan="0" ObjectiveValue="-15.6191" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.156191" Cost="-15.6191" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.156191" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="57" Title="Solution #58" OptimalValue="-15.49" TotalTime="0" TotalMakespan="0" ObjectiveValue="-15.49" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.1549" Cost="-15.49" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.1549" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="58" Title="Solution #59" OptimalValue="-9.49746" TotalTime="0" TotalMakespan="0" ObjectiveValue="-9.49746" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.0949746" Cost="-9.49746" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.0949746" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="59" Title="Solution #60" OptimalValue="-9.36837" TotalTime="0" TotalMakespan="0" ObjectiveValue="-9.36837" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M9" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.0936837" Cost="-9.36837" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O9" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.0936837" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="60" Title="Solution #61" OptimalValue="-6.25073" TotalTime="0" TotalMakespan="0" ObjectiveValue="-6.25073" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.0625073" Cost="-6.25073" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.0625073" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="61" Title="Solution #62" OptimalValue="-6.12163" TotalTime="0" TotalMakespan="0" ObjectiveValue="-6.12163" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M11" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.0612163" Cost="-6.12163" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O11" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.0612163" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="62" Title="Solution #63" OptimalValue="-0.129097" TotalTime="0" TotalMakespan="0" ObjectiveValue="-0.129097" AlgorithmUsed="INSIDEOUT">
+      <Materials>
+        <Material Name="M1" Flow="0" Cost="0" MU=""/>
+        <Material Name="M2" Flow="-1" Cost="0" MU=""/>
+        <Material Name="M13" Flow="0.00129097" Cost="-0.129097" MU=""/>
+      </Materials>
+      <OperatingUnits>
+        <OperatingUnit Name="O2" Size="1" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+        <OperatingUnit Name="O12" Size="0.00129097" Cost="0" MU="">
+          <Input/>
+          <Output/>
+        </OperatingUnit>
+      </OperatingUnits>
+    </Solutions>
+    <Solutions Index="63" Title="Solution #64" OptimalValue="0" TotalTime="0" TotalMakespan="0" ObjectiveValue="0" AlgorithmUsed="INSIDEOUT">
+      <Materials/>
+      <OperatingUnits/>
     </Solutions>
   </Solutions>
 </PGraph>
