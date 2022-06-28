@@ -7,8 +7,7 @@
 
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
-  * [Installation](#installation)
-* [Example Code](#usage-example)
+* [Example Code](#usage-examples)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -40,7 +39,8 @@ pip install git+https://github.com/tsyet12/Pgraph
 
 <!-- USAGE EXAMPLES -->
 ## Example Code
-See [`examples`](https://github.com/tsyet12/Pgraph/tree/main/examples).
+See [`examples`](https://github.com/tsyet12/Pgraph/tree/main/examples) for code examples.
+![Example](https://user-images.githubusercontent.com/19692103/176264519-40d81813-4422-4f05-a5b2-cc800cdbf75d.png)
 
 <!-- CONTRIBUTING -->
 ## Contributing
