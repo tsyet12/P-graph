@@ -96,6 +96,8 @@ string = P.to_studio(path='./',verbose=False) #export to p-graph studio
 files.download("./studio_file.pgsx") #download for google colab
 #Note: Please be reminded to press "Generate Layout" button in P-graph Studio after opening
 ```
+
+Press "Generate Layout" Button:
 ![layout](https://user-images.githubusercontent.com/19692103/176418041-e970a0bd-1b93-4a64-9cdb-544ae8c6a88b.PNG)
 
 
