@@ -98,6 +98,7 @@ files.download("./studio_file.pgsx") #download for google colab
 ```
 
 Press "Generate Layout" Button:
+
 ![layout](https://user-images.githubusercontent.com/19692103/176418041-e970a0bd-1b93-4a64-9cdb-544ae8c6a88b.PNG)
 
 
