@@ -40,8 +40,30 @@ pip install git+https://github.com/tsyet12/Pgraph
 
 <!-- USAGE EXAMPLES -->
 ## Example Code
-See [`examples`](https://github.com/tsyet12/Pgraph/tree/main/examples) for code examples.
 
+See [`examples`](https://github.com/tsyet12/Pgraph/tree/main/examples) for all code examples.
+
+### Simple Example
+```python
+from Pgraph.Pgraph import Pgraph #This is our Pgraph library
+import networkx as nx
+import matplotlib.pyplot as plt
+##### STEP 1 : Problem Specification ######
+G = nx.DiGraph()
+G.add_node("M1",names="Product D",type='product',flow_rate_lower_bound=100, flow_rate_upper_bound=100)
+G.add_node("M2",names="Chemical A",type='raw_material',price=200,flow_rate_lower_bound=0)
+G.add_node("M3",names="Chemical B", type='raw_material',price=100,flow_rate_lower_bound=0)
+G.add_node("M4",names="Chemical C", type='raw_material',price=10,flow_rate_lower_bound=0)
+G.add_node("O1",names="Reactor 1",fix_cost=2000, proportional_cost=400)
+G.add_node("O2", names="Reactor 2",fix_cost=1000, proportional_cost=400)
+G.add_edge("M2","O1", weight = 1)
+G.add_edge("M3","O2", weight = 1)
+G.add_edge("M4","O2", weight = 2)
+G.add_edge("O1","M1", weight = 0.7) 
+G.add_edge("O2","M1", weight = 0.9) 
+ME=[["O1","O2"]]  #Reactor 1 and Reactor 2 are mutually excluded. Only one can be chosen as solution.
+#############################
+```
 ![example](https://user-images.githubusercontent.com/19692103/176265167-3e41b536-9f2b-48df-b559-9290277065e7.png)
 
 <!-- CONTRIBUTING -->
