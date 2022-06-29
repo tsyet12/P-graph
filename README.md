@@ -1,6 +1,7 @@
 # Pgraph : Process Graphs for Process Network Synthesis (PNS)
 
 ![Pgraphlogo](https://user-images.githubusercontent.com/19692103/176261331-5ec5fd1d-eec6-467c-b79c-ed48691eecfb.png)
+[![DOI](https://zenodo.org/badge/507569838.svg)](https://zenodo.org/badge/latestdoi/507569838)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
