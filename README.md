@@ -89,7 +89,7 @@ for i in range(total_sol_num): # Here we loop through all the solutions to plot 
 ![example](https://user-images.githubusercontent.com/19692103/176265167-3e41b536-9f2b-48df-b559-9290277065e7.png)
 ![sol2](https://user-images.githubusercontent.com/19692103/176417706-dd2817eb-a6e0-4804-9c86-5d443d4567e6.png)
 
-```
+```python
 #### Step 3.2: Export to P-graph Studio ####
 from google.colab import files #This is only for google colab
 string = P.to_studio(path='./',verbose=False) #export to p-graph studio
