@@ -24,9 +24,9 @@ This project aims at enabling the classical P-graph Framework (www.p-graph.org) 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Install this library either from the official pypi or from this Github repository:
+Install this library either from the official PyPI or from this Github repository:
 
-## Install a Stable Version (pypi)
+## Install a Stable Version (PyPI)
 ```bat
 pip install ProcessGraph
 ```
