@@ -397,7 +397,12 @@ class Pgraph():
             nx.set_node_attributes(H,attr_op)
             nx.set_node_attributes(H,attr_mat)
         else:
-            print("No solution found. Please change solver.")
+            total_node=gmatlist[sol_num]+goplist[sol_num]
+            node_list=list(H.nodes()).copy()
+            for n in node_list:
+                if n not in total_node:
+                    H.remove_node(n)
+       
         return H
         
     def plot_solution(self,sol_num=0,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True,node_size=3000):
@@ -1042,8 +1047,11 @@ if __name__=="__main__":
     
     
     ##NEW FUNCTIONS #####
-    HH=P.get_solution_as_network(sol_num=1)
-    #print(HH.nodes())
-    
+    for i in range(total_sol_num):
+        HH=P.get_solution_as_network(sol_num=i)
+        #print(HH.nodes())
+        
     a,b,c=P.get_info()
-    print(a)
+    
+    
+    #get_solution_as_network(1)
