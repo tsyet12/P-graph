@@ -9,897 +9,604 @@ M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M13
 Operating units(11):
 O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12
 
-Feasible structure #1:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-122.193 USD/y): 1.22193 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-1.22193*O12 (0 USD/y): M1 (-1.22193 t/y) => M13 (1.22193 t/y) 
-Total annual cost= -122.193 USD/y
+Solution structure #1:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M7, M9, M10
+Operating units(8):
+O2, O3, O4, O5, O6, O7, O9, O10
 
-Feasible structure #2:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-122.064 USD/y): 1.22064 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-1.22064*O12 (0 USD/y): M1 (-1.22064 t/y) => M13 (1.22064 t/y) 
-Total annual cost= -122.064 USD/y
+Solution structure #2:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M7, M9, M10, M13
+Operating units(9):
+O2, O3, O4, O5, O6, O7, O9, O10, O12
 
-Feasible structure #3:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-116.072 USD/y): 1.16072 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1.16072*O12 (0 USD/y): M1 (-1.16072 t/y) => M13 (1.16072 t/y) 
-Total annual cost= -116.072 USD/y
+Solution structure #3:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M7, M8, M9, M10
+Operating units(9):
+O2, O3, O4, O5, O6, O7, O8, O9, O10
 
-Feasible structure #4:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-115.943 USD/y): 1.15943 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1.15943*O12 (0 USD/y): M1 (-1.15943 t/y) => M13 (1.15943 t/y) 
-Total annual cost= -115.943 USD/y
+Solution structure #4:
+Materials(11):
+M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M13
+Operating units(10):
+O2, O3, O4, O5, O6, O7, O8, O9, O10, O12
 
-Feasible structure #5:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-112.825 USD/y): 1.12825 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-1.12825*O12 (0 USD/y): M1 (-1.12825 t/y) => M13 (1.12825 t/y) 
-Total annual cost= -112.825 USD/y
+Solution structure #5:
+Materials(7):
+M1, M2, M3, M4, M5, M9, M11
+Operating units(6):
+O2, O3, O4, O5, O9, O11
 
-Feasible structure #6:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-112.696 USD/y): 1.12696 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-1.12696*O12 (0 USD/y): M1 (-1.12696 t/y) => M13 (1.12696 t/y) 
-Total annual cost= -112.696 USD/y
+Solution structure #6:
+Materials(8):
+M1, M2, M3, M4, M5, M9, M11, M13
+Operating units(7):
+O2, O3, O4, O5, O9, O11, O12
 
-Feasible structure #7:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-106.703 USD/y): 1.06703 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1.06703*O12 (0 USD/y): M1 (-1.06703 t/y) => M13 (1.06703 t/y) 
-Total annual cost= -106.703 USD/y
+Solution structure #7:
+Materials(8):
+M1, M2, M3, M4, M5, M8, M9, M11
+Operating units(7):
+O2, O3, O4, O5, O8, O9, O11
 
-Feasible structure #8:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-106.574 USD/y): 1.06574 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1.06574*O12 (0 USD/y): M1 (-1.06574 t/y) => M13 (1.06574 t/y) 
-Total annual cost= -106.574 USD/y
+Solution structure #8:
+Materials(9):
+M1, M2, M3, M4, M5, M8, M9, M11, M13
+Operating units(8):
+O2, O3, O4, O5, O8, O9, O11, O12
 
-Feasible structure #9:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-96.4466 USD/y): 0.964466 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.964466*O12 (0 USD/y): M1 (-0.964466 t/y) => M13 (0.964466 t/y) 
-Total annual cost= -96.4466 USD/y
+Solution structure #9:
+Materials(8):
+M1, M2, M3, M4, M5, M7, M9, M11
+Operating units(7):
+O2, O3, O4, O5, O7, O9, O11
 
-Feasible structure #10:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-96.3175 USD/y): 0.963175 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.963175*O12 (0 USD/y): M1 (-0.963175 t/y) => M13 (0.963175 t/y) 
-Total annual cost= -96.3175 USD/y
+Solution structure #10:
+Materials(9):
+M1, M2, M3, M4, M5, M7, M9, M11, M13
+Operating units(8):
+O2, O3, O4, O5, O7, O9, O11, O12
 
-Feasible structure #11:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-90.3249 USD/y): 0.903249 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.903249*O12 (0 USD/y): M1 (-0.903249 t/y) => M13 (0.903249 t/y) 
-Total annual cost= -90.3249 USD/y
+Solution structure #11:
+Materials(9):
+M1, M2, M3, M4, M5, M7, M8, M9, M11
+Operating units(8):
+O2, O3, O4, O5, O7, O8, O9, O11
 
-Feasible structure #12:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-90.1958 USD/y): 0.901958 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.901958*O12 (0 USD/y): M1 (-0.901958 t/y) => M13 (0.901958 t/y) 
-Total annual cost= -90.1958 USD/y
+Solution structure #12:
+Materials(10):
+M1, M2, M3, M4, M5, M7, M8, M9, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O7, O8, O9, O11, O12
 
-Feasible structure #13:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-87.0782 USD/y): 0.870782 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.870782*O12 (0 USD/y): M1 (-0.870782 t/y) => M13 (0.870782 t/y) 
-Total annual cost= -87.0782 USD/y
+Solution structure #13:
+Materials(8):
+M1, M2, M3, M4, M5, M6, M9, M11
+Operating units(7):
+O2, O3, O4, O5, O6, O9, O11
 
-Feasible structure #14:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-86.9491 USD/y): 0.869491 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.869491*O12 (0 USD/y): M1 (-0.869491 t/y) => M13 (0.869491 t/y) 
-Total annual cost= -86.9491 USD/y
+Solution structure #14:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M9, M11, M13
+Operating units(8):
+O2, O3, O4, O5, O6, O9, O11, O12
 
-Feasible structure #15:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-84.4883 USD/y): 0.844883 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.844883*O12 (0 USD/y): M1 (-0.844883 t/y) => M13 (0.844883 t/y) 
-Total annual cost= -84.4883 USD/y
+Solution structure #15:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M8, M9, M11
+Operating units(8):
+O2, O3, O4, O5, O6, O8, O9, O11
 
-Feasible structure #16:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-84.3592 USD/y): 0.843592 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.843592*O12 (0 USD/y): M1 (-0.843592 t/y) => M13 (0.843592 t/y) 
-Total annual cost= -84.3592 USD/y
+Solution structure #16:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M8, M9, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O6, O8, O9, O11, O12
 
-Feasible structure #17:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-80.9566 USD/y): 0.809566 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.809566*O12 (0 USD/y): M1 (-0.809566 t/y) => M13 (0.809566 t/y) 
-Total annual cost= -80.9566 USD/y
+Solution structure #17:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M7, M9, M11
+Operating units(8):
+O2, O3, O4, O5, O6, O7, O9, O11
 
-Feasible structure #18:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-80.8275 USD/y): 0.808275 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.808275*O12 (0 USD/y): M1 (-0.808275 t/y) => M13 (0.808275 t/y) 
-Total annual cost= -80.8275 USD/y
+Solution structure #18:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M7, M9, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O6, O7, O9, O11, O12
 
-Feasible structure #19:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-79.0707 USD/y): 0.790707 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.790707*O12 (0 USD/y): M1 (-0.790707 t/y) => M13 (0.790707 t/y) 
-Total annual cost= -79.0707 USD/y
+Solution structure #19:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M7, M8, M9, M11
+Operating units(9):
+O2, O3, O4, O5, O6, O7, O8, O9, O11
 
-Feasible structure #20:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-78.9416 USD/y): 0.789416 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.789416*O12 (0 USD/y): M1 (-0.789416 t/y) => M13 (0.789416 t/y) 
-Total annual cost= -78.9416 USD/y
+Solution structure #20:
+Materials(11):
+M1, M2, M3, M4, M5, M6, M7, M8, M9, M11, M13
+Operating units(10):
+O2, O3, O4, O5, O6, O7, O8, O9, O11, O12
 
-Feasible structure #21:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M13 (-78.3667 USD/y): 0.783667 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.783667*O12 (0 USD/y): M1 (-0.783667 t/y) => M13 (0.783667 t/y) 
-Total annual cost= -78.3667 USD/y
+Solution structure #21:
+Materials(7):
+M1, M2, M3, M4, M5, M10, M11
+Operating units(6):
+O2, O3, O4, O5, O10, O11
 
-Feasible structure #22:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M13 (-78.2376 USD/y): 0.782376 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.782376*O12 (0 USD/y): M1 (-0.782376 t/y) => M13 (0.782376 t/y) 
-Total annual cost= -78.2376 USD/y
+Solution structure #22:
+Materials(8):
+M1, M2, M3, M4, M5, M10, M11, M13
+Operating units(7):
+O2, O3, O4, O5, O10, O11, O12
 
-Feasible structure #23:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-75.12 USD/y): 0.7512 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.7512*O12 (0 USD/y): M1 (-0.7512 t/y) => M13 (0.7512 t/y) 
-Total annual cost= -75.12 USD/y
+Solution structure #23:
+Materials(8):
+M1, M2, M3, M4, M5, M8, M10, M11
+Operating units(7):
+O2, O3, O4, O5, O8, O10, O11
 
-Feasible structure #24:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-74.9909 USD/y): 0.749909 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.749909*O12 (0 USD/y): M1 (-0.749909 t/y) => M13 (0.749909 t/y) 
-Total annual cost= -74.9909 USD/y
+Solution structure #24:
+Materials(9):
+M1, M2, M3, M4, M5, M8, M10, M11, M13
+Operating units(8):
+O2, O3, O4, O5, O8, O10, O11, O12
 
-Feasible structure #25:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-72.9491 USD/y): 0.729491 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.729491*O12 (0 USD/y): M1 (-0.729491 t/y) => M13 (0.729491 t/y) 
-Total annual cost= -72.9491 USD/y
+Solution structure #25:
+Materials(8):
+M1, M2, M3, M4, M5, M7, M10, M11
+Operating units(7):
+O2, O3, O4, O5, O7, O10, O11
 
-Feasible structure #26:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-72.82 USD/y): 0.7282 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.7282*O12 (0 USD/y): M1 (-0.7282 t/y) => M13 (0.7282 t/y) 
-Total annual cost= -72.82 USD/y
+Solution structure #26:
+Materials(9):
+M1, M2, M3, M4, M5, M7, M10, M11, M13
+Operating units(8):
+O2, O3, O4, O5, O7, O10, O11, O12
 
-Feasible structure #27:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-69.7024 USD/y): 0.697024 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.697024*O12 (0 USD/y): M1 (-0.697024 t/y) => M13 (0.697024 t/y) 
-Total annual cost= -69.7024 USD/y
+Solution structure #27:
+Materials(9):
+M1, M2, M3, M4, M5, M7, M8, M10, M11
+Operating units(8):
+O2, O3, O4, O5, O7, O8, O10, O11
 
-Feasible structure #28:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-69.5733 USD/y): 0.695733 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.695733*O12 (0 USD/y): M1 (-0.695733 t/y) => M13 (0.695733 t/y) 
-Total annual cost= -69.5733 USD/y
+Solution structure #28:
+Materials(10):
+M1, M2, M3, M4, M5, M7, M8, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O7, O8, O10, O11, O12
 
-Feasible structure #29:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M13 (-68.9983 USD/y): 0.689983 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-0.689983*O12 (0 USD/y): M1 (-0.689983 t/y) => M13 (0.689983 t/y) 
-Total annual cost= -68.9983 USD/y
+Solution structure #29:
+Materials(8):
+M1, M2, M3, M4, M5, M6, M10, M11
+Operating units(7):
+O2, O3, O4, O5, O6, O10, O11
 
-Feasible structure #30:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M13 (-68.8692 USD/y): 0.688692 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-0.688692*O12 (0 USD/y): M1 (-0.688692 t/y) => M13 (0.688692 t/y) 
-Total annual cost= -68.8692 USD/y
+Solution structure #30:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M10, M11, M13
+Operating units(8):
+O2, O3, O4, O5, O6, O10, O11, O12
 
-Feasible structure #31:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-63.5807 USD/y): 0.635807 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.635807*O12 (0 USD/y): M1 (-0.635807 t/y) => M13 (0.635807 t/y) 
-Total annual cost= -63.5807 USD/y
+Solution structure #31:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M8, M10, M11
+Operating units(8):
+O2, O3, O4, O5, O6, O8, O10, O11
 
-Feasible structure #32:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-63.4516 USD/y): 0.634516 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.634516*O12 (0 USD/y): M1 (-0.634516 t/y) => M13 (0.634516 t/y) 
-Total annual cost= -63.4516 USD/y
+Solution structure #32:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M8, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O6, O8, O10, O11, O12
 
-Feasible structure #33:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-58.7416 USD/y): 0.587416 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.587416*O12 (0 USD/y): M1 (-0.587416 t/y) => M13 (0.587416 t/y) 
-Total annual cost= -58.7416 USD/y
+Solution structure #33:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M7, M10, M11
+Operating units(8):
+O2, O3, O4, O5, O6, O7, O10, O11
 
-Feasible structure #34:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-58.6125 USD/y): 0.586125 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.586125*O12 (0 USD/y): M1 (-0.586125 t/y) => M13 (0.586125 t/y) 
-Total annual cost= -58.6125 USD/y
+Solution structure #34:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M7, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O6, O7, O10, O11, O12
 
-Feasible structure #35:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-53.324 USD/y): 0.53324 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.53324*O12 (0 USD/y): M1 (-0.53324 t/y) => M13 (0.53324 t/y) 
-Total annual cost= -53.324 USD/y
+Solution structure #35:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M7, M8, M10, M11
+Operating units(9):
+O2, O3, O4, O5, O6, O7, O8, O10, O11
 
-Feasible structure #36:
-Materials:
-M1: balanced
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-53.1949 USD/y): 0.531949 t/y
-Operating units:
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.531949*O12 (0 USD/y): M1 (-0.531949 t/y) => M13 (0.531949 t/y) 
-Total annual cost= -53.1949 USD/y
+Solution structure #36:
+Materials(11):
+M1, M2, M3, M4, M5, M6, M7, M8, M10, M11, M13
+Operating units(10):
+O2, O3, O4, O5, O6, O7, O8, O10, O11, O12
 
-Feasible structure #37:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M13 (-52.62 USD/y): 0.5262 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.5262*O12 (0 USD/y): M1 (-0.5262 t/y) => M13 (0.5262 t/y) 
-Total annual cost= -52.62 USD/y
+Solution structure #37:
+Materials(7):
+M1, M2, M3, M4, M9, M10, M11
+Operating units(6):
+O2, O3, O4, O9, O10, O11
 
-Feasible structure #38:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M13 (-52.4909 USD/y): 0.524909 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.524909*O12 (0 USD/y): M1 (-0.524909 t/y) => M13 (0.524909 t/y) 
-Total annual cost= -52.4909 USD/y
+Solution structure #38:
+Materials(8):
+M1, M2, M3, M4, M9, M10, M11, M13
+Operating units(7):
+O2, O3, O4, O9, O10, O11, O12
 
-Feasible structure #39:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-49.3733 USD/y): 0.493733 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.493733*O12 (0 USD/y): M1 (-0.493733 t/y) => M13 (0.493733 t/y) 
-Total annual cost= -49.3733 USD/y
+Solution structure #39:
+Materials(8):
+M1, M2, M3, M4, M8, M9, M10, M11
+Operating units(7):
+O2, O3, O4, O8, O9, O10, O11
 
-Feasible structure #40:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-49.2442 USD/y): 0.492442 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.492442*O12 (0 USD/y): M1 (-0.492442 t/y) => M13 (0.492442 t/y) 
-Total annual cost= -49.2442 USD/y
+Solution structure #40:
+Materials(9):
+M1, M2, M3, M4, M8, M9, M10, M11, M13
+Operating units(8):
+O2, O3, O4, O8, O9, O10, O11, O12
 
-Feasible structure #41:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-47.2024 USD/y): 0.472024 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.472024*O12 (0 USD/y): M1 (-0.472024 t/y) => M13 (0.472024 t/y) 
-Total annual cost= -47.2024 USD/y
+Solution structure #41:
+Materials(8):
+M1, M2, M3, M4, M7, M9, M10, M11
+Operating units(7):
+O2, O3, O4, O7, O9, O10, O11
 
-Feasible structure #42:
-Materials:
-M1: balanced
-M9 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-47.0733 USD/y): 0.470733 t/y
-Operating units:
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.470733*O12 (0 USD/y): M1 (-0.470733 t/y) => M13 (0.470733 t/y) 
-Total annual cost= -47.0733 USD/y
+Solution structure #42:
+Materials(9):
+M1, M2, M3, M4, M7, M9, M10, M11, M13
+Operating units(8):
+O2, O3, O4, O7, O9, O10, O11, O12
 
-Feasible structure #43:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-43.9557 USD/y): 0.439557 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.439557*O12 (0 USD/y): M1 (-0.439557 t/y) => M13 (0.439557 t/y) 
-Total annual cost= -43.9557 USD/y
+Solution structure #43:
+Materials(9):
+M1, M2, M3, M4, M7, M8, M9, M10, M11
+Operating units(8):
+O2, O3, O4, O7, O8, O9, O10, O11
 
-Feasible structure #44:
-Materials:
-M1: balanced
-M10 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-43.8266 USD/y): 0.438266 t/y
-Operating units:
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.438266*O12 (0 USD/y): M1 (-0.438266 t/y) => M13 (0.438266 t/y) 
-Total annual cost= -43.8266 USD/y
+Solution structure #44:
+Materials(10):
+M1, M2, M3, M4, M7, M8, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O7, O8, O9, O10, O11, O12
 
-Feasible structure #45:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M4 (0 USD/y): -1 t/y
-M13 (-43.2516 USD/y): 0.432516 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-0.432516*O12 (0 USD/y): M1 (-0.432516 t/y) => M13 (0.432516 t/y) 
-Total annual cost= -43.2516 USD/y
+Solution structure #45:
+Materials(8):
+M1, M2, M3, M4, M6, M9, M10, M11
+Operating units(7):
+O2, O3, O4, O6, O9, O10, O11
 
-Feasible structure #46:
-Materials:
-M1: balanced
-M4 (0 USD/y): -1 t/y
-M13 (-43.1225 USD/y): 0.431225 t/y
-Operating units:
-1*O4 (0 USD/y): M4 (-1 t/y) => M1 (0.431225 t/y) 
-0.431225*O12 (0 USD/y): M1 (-0.431225 t/y) => M13 (0.431225 t/y) 
-Total annual cost= -43.1225 USD/y
+Solution structure #46:
+Materials(9):
+M1, M2, M3, M4, M6, M9, M10, M11, M13
+Operating units(8):
+O2, O3, O4, O6, O9, O10, O11, O12
 
-Feasible structure #47:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-41.3658 USD/y): 0.413658 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.413658*O12 (0 USD/y): M1 (-0.413658 t/y) => M13 (0.413658 t/y) 
-Total annual cost= -41.3658 USD/y
+Solution structure #47:
+Materials(9):
+M1, M2, M3, M4, M6, M8, M9, M10, M11
+Operating units(8):
+O2, O3, O4, O6, O8, O9, O10, O11
 
-Feasible structure #48:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-41.2367 USD/y): 0.412367 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.412367*O12 (0 USD/y): M1 (-0.412367 t/y) => M13 (0.412367 t/y) 
-Total annual cost= -41.2367 USD/y
+Solution structure #48:
+Materials(10):
+M1, M2, M3, M4, M6, M8, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O6, O8, O9, O10, O11, O12
 
-Feasible structure #49:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M10 (0 USD/y): -1 t/y
-M13 (-37.834 USD/y): 0.37834 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.37834*O12 (0 USD/y): M1 (-0.37834 t/y) => M13 (0.37834 t/y) 
-Total annual cost= -37.834 USD/y
+Solution structure #49:
+Materials(9):
+M1, M2, M3, M4, M6, M7, M9, M10, M11
+Operating units(8):
+O2, O3, O4, O6, O7, O9, O10, O11
 
-Feasible structure #50:
-Materials:
-M1: balanced
-M10 (0 USD/y): -1 t/y
-M13 (-37.7049 USD/y): 0.377049 t/y
-Operating units:
-1*O10 (0 USD/y): M10 (-1 t/y) => M1 (0.377049 t/y) 
-0.377049*O12 (0 USD/y): M1 (-0.377049 t/y) => M13 (0.377049 t/y) 
-Total annual cost= -37.7049 USD/y
+Solution structure #50:
+Materials(10):
+M1, M2, M3, M4, M6, M7, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O6, O7, O9, O10, O11, O12
 
-Feasible structure #51:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M13 (-35.2442 USD/y): 0.352442 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.352442*O12 (0 USD/y): M1 (-0.352442 t/y) => M13 (0.352442 t/y) 
-Total annual cost= -35.2442 USD/y
+Solution structure #51:
+Materials(10):
+M1, M2, M3, M4, M6, M7, M8, M9, M10, M11
+Operating units(9):
+O2, O3, O4, O6, O7, O8, O9, O10, O11
 
-Feasible structure #52:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M13 (-35.1151 USD/y): 0.351151 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.351151*O12 (0 USD/y): M1 (-0.351151 t/y) => M13 (0.351151 t/y) 
-Total annual cost= -35.1151 USD/y
+Solution structure #52:
+Materials(11):
+M1, M2, M3, M4, M6, M7, M8, M9, M10, M11, M13
+Operating units(10):
+O2, O3, O4, O6, O7, O8, O9, O10, O11, O12
 
-Feasible structure #53:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-31.9974 USD/y): 0.319974 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.319974*O12 (0 USD/y): M1 (-0.319974 t/y) => M13 (0.319974 t/y) 
-Total annual cost= -31.9974 USD/y
+Solution structure #53:
+Materials(7):
+M1, M2, M3, M5, M9, M10, M11
+Operating units(6):
+O2, O3, O5, O9, O10, O11
 
-Feasible structure #54:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-31.8683 USD/y): 0.318683 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.318683*O12 (0 USD/y): M1 (-0.318683 t/y) => M13 (0.318683 t/y) 
-Total annual cost= -31.8683 USD/y
+Solution structure #54:
+Materials(8):
+M1, M2, M3, M5, M9, M10, M11, M13
+Operating units(7):
+O2, O3, O5, O9, O10, O11, O12
 
-Feasible structure #55:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M5 (0 USD/y): -1 t/y
-M13 (-25.8758 USD/y): 0.258758 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-0.258758*O12 (0 USD/y): M1 (-0.258758 t/y) => M13 (0.258758 t/y) 
-Total annual cost= -25.8758 USD/y
+Solution structure #55:
+Materials(8):
+M1, M2, M3, M5, M8, M9, M10, M11
+Operating units(7):
+O2, O3, O5, O8, O9, O10, O11
 
-Feasible structure #56:
-Materials:
-M1: balanced
-M5 (0 USD/y): -1 t/y
-M13 (-25.7467 USD/y): 0.257467 t/y
-Operating units:
-1*O5 (0 USD/y): M5 (-1 t/y) => M1 (0.257467 t/y) 
-0.257467*O12 (0 USD/y): M1 (-0.257467 t/y) => M13 (0.257467 t/y) 
-Total annual cost= -25.7467 USD/y
+Solution structure #56:
+Materials(9):
+M1, M2, M3, M5, M8, M9, M10, M11, M13
+Operating units(8):
+O2, O3, O5, O8, O9, O10, O11, O12
 
-Feasible structure #57:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-15.6191 USD/y): 0.156191 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.156191*O12 (0 USD/y): M1 (-0.156191 t/y) => M13 (0.156191 t/y) 
-Total annual cost= -15.6191 USD/y
+Solution structure #57:
+Materials(8):
+M1, M2, M3, M5, M7, M9, M10, M11
+Operating units(7):
+O2, O3, O5, O7, O9, O10, O11
 
-Feasible structure #58:
-Materials:
-M1: balanced
-M9 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-15.49 USD/y): 0.1549 t/y
-Operating units:
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.1549*O12 (0 USD/y): M1 (-0.1549 t/y) => M13 (0.1549 t/y) 
-Total annual cost= -15.49 USD/y
+Solution structure #58:
+Materials(9):
+M1, M2, M3, M5, M7, M9, M10, M11, M13
+Operating units(8):
+O2, O3, O5, O7, O9, O10, O11, O12
 
-Feasible structure #59:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M9 (0 USD/y): -1 t/y
-M13 (-9.49746 USD/y): 0.0949746 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.0949746*O12 (0 USD/y): M1 (-0.0949746 t/y) => M13 (0.0949746 t/y) 
-Total annual cost= -9.49746 USD/y
+Solution structure #59:
+Materials(9):
+M1, M2, M3, M5, M7, M8, M9, M10, M11
+Operating units(8):
+O2, O3, O5, O7, O8, O9, O10, O11
 
-Feasible structure #60:
-Materials:
-M1: balanced
-M9 (0 USD/y): -1 t/y
-M13 (-9.36837 USD/y): 0.0936837 t/y
-Operating units:
-1*O9 (0 USD/y): M9 (-1 t/y) => M1 (0.0936837 t/y) 
-0.0936837*O12 (0 USD/y): M1 (-0.0936837 t/y) => M13 (0.0936837 t/y) 
-Total annual cost= -9.36837 USD/y
+Solution structure #60:
+Materials(10):
+M1, M2, M3, M5, M7, M8, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O5, O7, O8, O9, O10, O11, O12
 
-Feasible structure #61:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M11 (0 USD/y): -1 t/y
-M13 (-6.25073 USD/y): 0.0625073 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.0625073*O12 (0 USD/y): M1 (-0.0625073 t/y) => M13 (0.0625073 t/y) 
-Total annual cost= -6.25073 USD/y
+Solution structure #61:
+Materials(8):
+M1, M2, M3, M5, M6, M9, M10, M11
+Operating units(7):
+O2, O3, O5, O6, O9, O10, O11
 
-Feasible structure #62:
-Materials:
-M1: balanced
-M11 (0 USD/y): -1 t/y
-M13 (-6.12163 USD/y): 0.0612163 t/y
-Operating units:
-1*O11 (0 USD/y): M11 (-1 t/y) => M1 (0.0612163 t/y) 
-0.0612163*O12 (0 USD/y): M1 (-0.0612163 t/y) => M13 (0.0612163 t/y) 
-Total annual cost= -6.12163 USD/y
+Solution structure #62:
+Materials(9):
+M1, M2, M3, M5, M6, M9, M10, M11, M13
+Operating units(8):
+O2, O3, O5, O6, O9, O10, O11, O12
 
-Feasible structure #63:
-Materials:
-M1: balanced
-M2 (0 USD/y): -1 t/y
-M13 (-0.129097 USD/y): 0.00129097 t/y
-Operating units:
-1*O2 (0 USD/y): M2 (-1 t/y) => M1 (0.00129097 t/y) 
-0.00129097*O12 (0 USD/y): M1 (-0.00129097 t/y) => M13 (0.00129097 t/y) 
-Total annual cost= -0.129097 USD/y
+Solution structure #63:
+Materials(9):
+M1, M2, M3, M5, M6, M8, M9, M10, M11
+Operating units(8):
+O2, O3, O5, O6, O8, O9, O10, O11
 
-Feasible structure #64:
-Materials:
-Operating units:
-Total annual cost= 0 USD/y
+Solution structure #64:
+Materials(10):
+M1, M2, M3, M5, M6, M8, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O5, O6, O8, O9, O10, O11, O12
+
+Solution structure #65:
+Materials(9):
+M1, M2, M3, M5, M6, M7, M9, M10, M11
+Operating units(8):
+O2, O3, O5, O6, O7, O9, O10, O11
+
+Solution structure #66:
+Materials(10):
+M1, M2, M3, M5, M6, M7, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O5, O6, O7, O9, O10, O11, O12
+
+Solution structure #67:
+Materials(10):
+M1, M2, M3, M5, M6, M7, M8, M9, M10, M11
+Operating units(9):
+O2, O3, O5, O6, O7, O8, O9, O10, O11
+
+Solution structure #68:
+Materials(11):
+M1, M2, M3, M5, M6, M7, M8, M9, M10, M11, M13
+Operating units(10):
+O2, O3, O5, O6, O7, O8, O9, O10, O11, O12
+
+Solution structure #69:
+Materials(7):
+M1, M3, M4, M5, M9, M10, M11
+Operating units(6):
+O3, O4, O5, O9, O10, O11
+
+Solution structure #70:
+Materials(8):
+M1, M3, M4, M5, M9, M10, M11, M13
+Operating units(7):
+O3, O4, O5, O9, O10, O11, O12
+
+Solution structure #71:
+Materials(8):
+M1, M3, M4, M5, M8, M9, M10, M11
+Operating units(7):
+O3, O4, O5, O8, O9, O10, O11
+
+Solution structure #72:
+Materials(9):
+M1, M3, M4, M5, M8, M9, M10, M11, M13
+Operating units(8):
+O3, O4, O5, O8, O9, O10, O11, O12
+
+Solution structure #73:
+Materials(8):
+M1, M3, M4, M5, M7, M9, M10, M11
+Operating units(7):
+O3, O4, O5, O7, O9, O10, O11
+
+Solution structure #74:
+Materials(9):
+M1, M3, M4, M5, M7, M9, M10, M11, M13
+Operating units(8):
+O3, O4, O5, O7, O9, O10, O11, O12
+
+Solution structure #75:
+Materials(9):
+M1, M3, M4, M5, M7, M8, M9, M10, M11
+Operating units(8):
+O3, O4, O5, O7, O8, O9, O10, O11
+
+Solution structure #76:
+Materials(10):
+M1, M3, M4, M5, M7, M8, M9, M10, M11, M13
+Operating units(9):
+O3, O4, O5, O7, O8, O9, O10, O11, O12
+
+Solution structure #77:
+Materials(8):
+M1, M3, M4, M5, M6, M9, M10, M11
+Operating units(7):
+O3, O4, O5, O6, O9, O10, O11
+
+Solution structure #78:
+Materials(9):
+M1, M3, M4, M5, M6, M9, M10, M11, M13
+Operating units(8):
+O3, O4, O5, O6, O9, O10, O11, O12
+
+Solution structure #79:
+Materials(9):
+M1, M3, M4, M5, M6, M8, M9, M10, M11
+Operating units(8):
+O3, O4, O5, O6, O8, O9, O10, O11
+
+Solution structure #80:
+Materials(10):
+M1, M3, M4, M5, M6, M8, M9, M10, M11, M13
+Operating units(9):
+O3, O4, O5, O6, O8, O9, O10, O11, O12
+
+Solution structure #81:
+Materials(9):
+M1, M3, M4, M5, M6, M7, M9, M10, M11
+Operating units(8):
+O3, O4, O5, O6, O7, O9, O10, O11
+
+Solution structure #82:
+Materials(10):
+M1, M3, M4, M5, M6, M7, M9, M10, M11, M13
+Operating units(9):
+O3, O4, O5, O6, O7, O9, O10, O11, O12
+
+Solution structure #83:
+Materials(10):
+M1, M3, M4, M5, M6, M7, M8, M9, M10, M11
+Operating units(9):
+O3, O4, O5, O6, O7, O8, O9, O10, O11
+
+Solution structure #84:
+Materials(11):
+M1, M3, M4, M5, M6, M7, M8, M9, M10, M11, M13
+Operating units(10):
+O3, O4, O5, O6, O7, O8, O9, O10, O11, O12
+
+Solution structure #85:
+Materials(8):
+M1, M2, M3, M4, M5, M9, M10, M11
+Operating units(7):
+O2, O3, O4, O5, O9, O10, O11
+
+Solution structure #86:
+Materials(9):
+M1, M2, M3, M4, M5, M9, M10, M11, M13
+Operating units(8):
+O2, O3, O4, O5, O9, O10, O11, O12
+
+Solution structure #87:
+Materials(9):
+M1, M2, M3, M4, M5, M8, M9, M10, M11
+Operating units(8):
+O2, O3, O4, O5, O8, O9, O10, O11
+
+Solution structure #88:
+Materials(10):
+M1, M2, M3, M4, M5, M8, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O8, O9, O10, O11, O12
+
+Solution structure #89:
+Materials(9):
+M1, M2, M3, M4, M5, M7, M9, M10, M11
+Operating units(8):
+O2, O3, O4, O5, O7, O9, O10, O11
+
+Solution structure #90:
+Materials(10):
+M1, M2, M3, M4, M5, M7, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O7, O9, O10, O11, O12
+
+Solution structure #91:
+Materials(10):
+M1, M2, M3, M4, M5, M7, M8, M9, M10, M11
+Operating units(9):
+O2, O3, O4, O5, O7, O8, O9, O10, O11
+
+Solution structure #92:
+Materials(11):
+M1, M2, M3, M4, M5, M7, M8, M9, M10, M11, M13
+Operating units(10):
+O2, O3, O4, O5, O7, O8, O9, O10, O11, O12
+
+Solution structure #93:
+Materials(9):
+M1, M2, M3, M4, M5, M6, M9, M10, M11
+Operating units(8):
+O2, O3, O4, O5, O6, O9, O10, O11
+
+Solution structure #94:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M9, M10, M11, M13
+Operating units(9):
+O2, O3, O4, O5, O6, O9, O10, O11, O12
+
+Solution structure #95:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M8, M9, M10, M11
+Operating units(9):
+O2, O3, O4, O5, O6, O8, O9, O10, O11
+
+Solution structure #96:
+Materials(11):
+M1, M2, M3, M4, M5, M6, M8, M9, M10, M11, M13
+Operating units(10):
+O2, O3, O4, O5, O6, O8, O9, O10, O11, O12
+
+Solution structure #97:
+Materials(10):
+M1, M2, M3, M4, M5, M6, M7, M9, M10, M11
+Operating units(9):
+O2, O3, O4, O5, O6, O7, O9, O10, O11
+
+Solution structure #98:
+Materials(11):
+M1, M2, M3, M4, M5, M6, M7, M9, M10, M11, M13
+Operating units(10):
+O2, O3, O4, O5, O6, O7, O9, O10, O11, O12
+
+Solution structure #99:
+Materials(11):
+M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11
+Operating units(10):
+O2, O3, O4, O5, O6, O7, O8, O9, O10, O11
+
+Solution structure #100:
+Materials(12):
+M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M13
+Operating units(11):
+O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12
 
 End.
