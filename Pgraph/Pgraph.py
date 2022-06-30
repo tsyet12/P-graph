@@ -250,9 +250,9 @@ class Pgraph():
             os.popen(out_string).read()
         ################
     
-    def read_solution(self):
+    def read_solutions(self):
         '''
-        read_solution()
+        read_solutions()
         
         Description
         Reads the solution from the solver.            
@@ -910,7 +910,7 @@ class Pgraph():
         '''
         self.create_solver_input()
         self.solve(system=system,skip_wine=skip_wine)
-        self.read_solution()
+        self.read_solutions()
         
     def get_info(self):
         '''
