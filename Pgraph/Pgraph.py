@@ -11,6 +11,20 @@ import platform
 
 class Pgraph():
     def __init__(self, problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100):
+        ''' 
+        Pgraph(problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100)
+                
+        Description
+        This function initializes the Pgraph object and prepares the solver.
+        
+        Arguments
+        problem_network: (DiGraph() object) Directed graph object specified using networkx
+        mutual_exclusion: (list of list) List of lists containing mutually excluded elements. Symbols of nodes should be used. e.g. "M1"
+        solver: (str) solver type that is used. Possibilities include "MSE", "SSG", "SSGLP" (for SSG+LP), "INSIDEOUT" (for ABB)
+        max_sol: (int) Maximum number of solutions required for the solver.       
+        
+        '''
+    
         #In case names is not specified, revert to symbol of graph
         for n in problem_network:
             if 'names' not in list(problem_network.nodes()[n].keys()):
@@ -25,7 +39,25 @@ class Pgraph():
         self.goplist=[]
         self.goolist=[]
         self.wine_installed=False #For Linux Only
-    def plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True):
+        
+    def plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True,node_size=3000):
+        '''
+        plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True)
+                
+        Description
+        This function plots the network figure of the problem. 
+        
+        Arguments
+        figsize: (tuple) Size of figure
+        padding: (float) Padding of the sides of the image
+        titlepos: (float) Position of title in the figure
+        rescale: (float) Rescaling the axis of the figures. Makes nodes further apart and appear smaller.
+        box: (boolean) Whether the figure should appear square.
+        
+        Return:
+        ax: (matplotlib.axes) Axes of the figure. Can be manipulated further before plotting.
+        '''
+        
         G=self.G.copy()
         for n in G.nodes():
             if n[0]=="O":
@@ -49,23 +81,23 @@ class Pgraph():
             
         pos=nx.rescale_layout_dict(pos,scale=rescale)
         pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-        nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=12)
+        nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=12)
         for aShape in nodeShapes:
             if aShape=="o":
-                node_size=3000
+                node_size1=node_size
             else:
-                node_size=6000
-            nx.draw_networkx_nodes(G,pos=pos2,node_color='black',node_shape = aShape, nodelist = [sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,G.nodes(data = True))],node_size=node_size)
+                node_size1=node_size*2
+            nx.draw_networkx_nodes(G,pos=pos2,node_color='black',node_shape = aShape, nodelist = [sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,G.nodes(data = True))],node_size=node_size1)
         
         
         for key, values in nx.get_node_attributes(G,'type').items():
             if values=="raw_material":
-                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=1600)
+                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=node_size/3*1.6)
                 
             elif values=="product":
-                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=2000)
-                nx.draw_networkx_nodes(G,pos=pos,node_color='black',node_shape = 'o', nodelist = [key],node_size=1250)
-                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=750)
+                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=node_size/3*2)
+                nx.draw_networkx_nodes(G,pos=pos,node_color='black',node_shape = 'o', nodelist = [key],node_size=node_size/3*1.25)
+                nx.draw_networkx_nodes(G,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=node_size/3*0.75)
                 
                 
         nx.draw_networkx_edge_labels(G, pos=pos,edge_labels=labels)
@@ -79,7 +111,15 @@ class Pgraph():
         ax.set_title("Original Problem ",y=titlepos)
         return ax
     
-    def convert_problem(self):
+    def create_solver_input(self):
+        '''
+        create_solver_input()
+        
+        Description
+        This function creates the solver input from the networkx DiGraph() object specified.
+
+        '''
+
         G=self.G
         ME=self.ME
         path=self.path
@@ -177,11 +217,16 @@ class Pgraph():
                 f.write(line)
 
     def solve(self,system=None,skip_wine=False):
-        ###RUN SOLVER##########
         '''
+        solve(system=None,skip_wine=False)
+        
+        Description
+        Runs the solver.
+        
         Arguments:
-        solver (int): 0:"MSG",1:"SSG",2:"SSGLP",3:"INSIDEOUT"
-        max_sol (int): Maximum number of solutions from solver (default=100)
+        system: (string) (optional) Operating system. Options of "Windows", "Linux". MacOS is not supported yet. Specifying this makes function slightly faster.
+        skip_wine: (boolean) Only relevent for Linux. Skip the dependency "wine" if it is already installed. 
+        
         '''
         path=self.path
         max_sol=self.max_sol
@@ -206,14 +251,23 @@ class Pgraph():
         ################
     
     def read_solution(self):
-        path=self.path
+        '''
+        read_solution()
         
-        ### READ SOLUTION ##########
+        Description
+        Reads the solution from the solver.            
+        '''
+    
+        path=self.path
+        gmatlist=[]
+        goplist=[]
+        goolist=[]
+        
         #clean strings
         with open(path+"test_out.out","r") as f:
             lines = f.readlines()
         for i in range(len(lines)-1,0,-1):
-            if lines[i][0]==" ":
+            if lines[i][0]==" " or (len(lines[i].strip())>0 and ":" not in lines[i] and "," not in lines[i] and "= " not in lines[i] and "End." not in lines[i]): ## Attention for possible future changes
                 if lines[i-1][-3:]!="\n":
                     lines[i-1]=lines[i-1].strip()+" "+lines[i].strip()
                     lines[i]=""
@@ -222,171 +276,348 @@ class Pgraph():
                     lines[i]=""
         lines=list(map(lambda x:x.strip(),lines))
         lines=list(filter(None, lines))
-        mat_list=lines[1]
-        op_list=lines[3]
-        used_mat_list=lines[6] 
+        #Lines are now clean with next lines combined as elements of list.
+        
+        ###### Read for the case of SSGLP and INSIDEOUT (ABB) ######
+        if self.solver in ["SSGLP","INSIDEOUT",2,3]:
+            mat_list=lines[1]
+            op_list=lines[3]
+            used_mat_list=lines[6] 
 
-        #Find solutions
-        sol_start_index=[]
-        for i in range(len(lines)):
-            if lines[i][:18]=="Feasible structure":
-                sol_start_index.append(i)
-                #print(lines[i][19:-1])
+            #Find solutions via Feasible Structure tag
+            sol_start_index=[]
+            for i in range(len(lines)):
+                if lines[i][:18]=="Feasible structure":
+                    sol_start_index.append(i)
 
-        sol_start_index.append(len(lines)-1)
+            sol_start_index.append(len(lines)-1)
 
-        sol_list=[]
-        for i in range(1,len(sol_start_index)):
-            sol_list.append(lines[sol_start_index[i-1]:sol_start_index[i]])
+            sol_list=[]
+            for i in range(1,len(sol_start_index)):
+                sol_list.append(lines[sol_start_index[i-1]:sol_start_index[i]])
 
-        comp=["Materials:","Operating units:","Total annual cost="]
-
-        gmatlist=[]
-        goplist=[]
-        goolist=[]
-        for i in range(len(sol_list)): #loop through solution number
-            comp_ind=-1
-            s=False
-            
-            tmatlist=[]
-            toplist=[]
-            for j in range(len(sol_list[i])):
-                if sol_list[i][j][:len(comp[0])]==comp[0]:
-                    comp_ind=0
-                    s=True
-                elif sol_list[i][j][:len(comp[1])]==comp[1]:   
-                    comp_ind=1
-                    s=True
-                elif sol_list[i][j][:len(comp[2])]==comp[2]:   
-                    comp_ind=2
-                    s=True
-                if s==False:
-                    if comp_ind==0:
-                        tlist=sol_list[i][j].replace('(',' ')
-                        tlist=tlist.replace(')','')
-                        tlist=tlist.split()
-                        if tlist[0][-1]==":":
-                            tlist[0]=tlist[0][:-1] #correct for semicolon  
-                        if tlist[1]=="balanced": #correct for balanced
-                            tlist=[tlist[0],0,0,0]
-                        tmatlist.append(tlist)
-                    elif comp_ind==1:
-                        #print(sol_list[i][j])
-                        glist=sol_list[i][j].split(')')
-                        glist=glist[0].replace('*',' ')
-                        glist=glist.replace('(', ' ')
-                        glist=glist.split()
-                        toplist.append(glist)
-                if comp_ind==2:
-                    #print(sol_list[i][j])
-                    goolist.append(sol_list[i][j].split()[3])
+            comp=["Materials:","Operating units:","Total annual cost="]
+            for i in range(len(sol_list)): #loop through solution number
+                comp_ind=-1
                 s=False
-            goplist.append(toplist)
-            gmatlist.append(tmatlist)        
-        self.goplist=goplist
-        self.gmatlist=gmatlist
-        self.goolist=goolist
-    def plot_solution(self,sol_num=0,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True):
+                tmatlist=[]
+                toplist=[]
+                for j in range(len(sol_list[i])):
+                    if sol_list[i][j][:len(comp[0])]==comp[0]: #Materials
+                        comp_ind=0
+                        s=True
+                    elif sol_list[i][j][:len(comp[1])]==comp[1]:    #Operating units
+                        comp_ind=1
+                        s=True
+                    elif sol_list[i][j][:len(comp[2])]==comp[2]:   # Total annual cost
+                        comp_ind=2
+                        s=True
+                    if s==False:
+                        if comp_ind==0: #Materials
+                           
+                            tlist=sol_list[i][j].replace('(',' ')
+                            tlist=tlist.replace(')','')
+                            tlist=tlist.split()
+                            if tlist[0][-1]==":":
+                                tlist[0]=tlist[0][:-1] #correct for semicolon  
+                            if tlist[1]=="balanced": #correct for balanced
+                                tlist=[tlist[0],0,0,0]
+                            tmatlist.append(tlist)
+                        elif comp_ind==1: #Operating units
+                            glist=sol_list[i][j].split(')')
+                            glist=glist[0].replace('*',' ')
+                            glist=glist.replace('(', ' ')
+                            glist=glist.split()
+                            toplist.append(glist)
+                    if comp_ind==2:  #Total annual cost
+                        goolist.append(sol_list[i][j].split()[3])
+                    s=False
+
+                goplist.append(toplist)
+                gmatlist.append(tmatlist)        
+            self.goplist=goplist
+            self.gmatlist=gmatlist
+            self.goolist=goolist
+            if len(goolist)==0: 
+                print("No Feasible Solution Found!")
+        
+        ###### Read for the case MSG ######
+        if self.solver in ["MSG",0,"SSG",1]:
+            MS_M=False
+            MS_O=False
+            for i in range(len(lines)):
+            
+                #### maximal structure ####
+                if lines[i]=="Maximal Structure:": #enable trigger
+                    MS_M=True
+                    MS_O=True
+                if MS_M==True and lines[i][:9]=="Materials":
+                    gmatlist.append(lines[i+1].split(", "))
+                    MS_M=False
+                if MS_O==True and lines[i][:15] =="Operating units":
+                    goplist.append(lines[i+1].split(", "))
+                    goolist.append(0)
+                    MS_O=False
+                
+                if lines[i][:19]=="Solution structure ":
+                    goolist.append(lines[i].split("#")[1][:-1]) #SSG number
+                    if lines[i+1][:9]== "Materials":
+                        gmatlist.append(lines[i+2].split(", "))
+                    if lines[i+3][:15] =="Operating units":
+                        goplist.append(lines[i+4].split(", "))
+            self.goplist=goplist
+            self.gmatlist=gmatlist
+            self.goolist=goolist
+    def get_solution_as_network(self, sol_num=0):
+        '''
+        get_solution_as_network(sol_num=0)
+                
+        Description
+        This function returns the DiGraph() object of the solution
+        
+        Arguments
+        sol_num: (int) Index of the solution to be returned
+        
+        Return:
+        H: (networkx DiGraph() object) Directed Graph object of the solution.
+        '''
         sol_num=sol_num
         H=self.G.copy()
         gmatlist=self.gmatlist
         goplist=self.goplist
-        goolist=self.goolist  
-        for n in H.nodes():
-            if n[0]=="O":
-                H.nodes[n]['s']=mpl.markers.MarkerStyle(marker='s', fillstyle='top')
-            else:
-                H.nodes[n]['s']='o'
-        attr_op={x[1]:{"Capacity":x[0],"Cost":x[2]} for x in goplist[sol_num]}
-        attr_mat={x[0]:{"Flow":x[3],"Cost":x[1]} for x in gmatlist[sol_num]}
-        nx.set_node_attributes(H,attr_op)
-        nx.set_node_attributes(H,attr_mat)
-        plt.rc('figure',figsize=figsize)
-        label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
-        edges=H.edges()
-        weights = [H[u][v]['weight'] for u,v in edges]
-        labels = nx.get_edge_attributes(H,'weight')
-        labels={k:round(v,2) for k,v in labels.items()}
-        labels_flow=nx.get_node_attributes(H,'Flow')
-        labels_cap=nx.get_node_attributes(H,'Capacity')
-        labels_cost=nx.get_node_attributes(H,'Cost')
-        all_node=list(set(list(labels_flow.keys())+list(labels_cap.keys())+list(labels_cost.keys())))
-        labels1={}
-        for x in all_node:
-            string=H.nodes()[x]['names']
-            if labels_flow.get(x) is not None:
-                string=string+"\nFlow="+str(abs(float(labels_flow.get(x))))
-            
-            if labels_cap.get(x) is not None:
-                string=string+"\nCap.="+str(labels_cap.get(x))
+        goolist=self.goolist
+        if self.solver in ["SSGLP","INSIDEOUT",2,3] :
+            for n in H.nodes():
+                if n[0]=="O":
+                    H.nodes[n]['s']=mpl.markers.MarkerStyle(marker='s', fillstyle='top')
+                else:
+                    H.nodes[n]['s']='o'
+            attr_op={x[1]:{"Capacity":x[0],"Cost":x[2]} for x in goplist[sol_num]}
+            attr_mat={x[0]:{"Flow":x[3],"Cost":x[1]} for x in gmatlist[sol_num]}
+            nx.set_node_attributes(H,attr_op)
+            nx.set_node_attributes(H,attr_mat)
+        else:
+            print("No solution found. Please change solver.")
+        return H
+        
+    def plot_solution(self,sol_num=0,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True,node_size=3000):
+        '''
+        plot_solution(sol_num=0,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True)
                 
-            if labels_cost.get(x) is not None:    
-                string=string+"\nCost="+str(labels_cost.get(x))
-            
-            labels1.update({x:string})
+        Description
+        This function plots the network figure of the solution via its index. 
+        
+        Arguments
+        sol_num: (int) Index of the solution to be plotted
+        figsize: (tuple) Size of figure
+        padding: (float) Padding of the sides of the image
+        titlepos: (float) Position of title in the figure
+        rescale: (float) Rescaling the axis of the figures. Makes nodes further apart and appear smaller.
+        box: (boolean) Whether the figure should appear square.
+        
+        Return:
+        ax: (matplotlib.axes) Axes of the figure. Can be manipulated further before plotting.
+        '''
+        
+        sol_num=sol_num
+        H=self.G.copy()
+        gmatlist=self.gmatlist
+        goplist=self.goplist
+        goolist=self.goolist
+        
 
-        for e in H.edges():
-            if e[0] in all_node and e[1] in all_node:
-                H[e[0]][e[1]]['color']='black'
-            else:
-                H[e[0]][e[1]]['color']='lightgrey'
+        if self.solver in ["SSGLP","INSIDEOUT",2,3] and len(goolist)!=0:
+            for n in H.nodes():
+                if n[0]=="O":
+                    H.nodes[n]['s']=mpl.markers.MarkerStyle(marker='s', fillstyle='top')
+                else:
+                    H.nodes[n]['s']='o'
+            attr_op={x[1]:{"Capacity":x[0],"Cost":x[2]} for x in goplist[sol_num]}
+            attr_mat={x[0]:{"Flow":x[3],"Cost":x[1]} for x in gmatlist[sol_num]}
+            nx.set_node_attributes(H,attr_op)
+            nx.set_node_attributes(H,attr_mat)
+            plt.rc('figure',figsize=figsize)
+            label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
+            edges=H.edges()
+            weights = [H[u][v]['weight'] for u,v in edges]
+            labels = nx.get_edge_attributes(H,'weight')
+            labels={k:round(v,2) for k,v in labels.items()}
+            labels_flow=nx.get_node_attributes(H,'Flow')
+            labels_cap=nx.get_node_attributes(H,'Capacity')
+            labels_cost=nx.get_node_attributes(H,'Cost')
+            all_node=list(set(list(labels_flow.keys())+list(labels_cap.keys())+list(labels_cost.keys())))
+            labels1={}
+            for x in all_node:
+                string=H.nodes()[x]['names']
+                if labels_flow.get(x) is not None:
+                    string=string+"\nFlow="+str(abs(float(labels_flow.get(x))))
                 
-        for n in H.nodes():
-            if n in all_node:
-                H.nodes()[n]['color']='black'
-            else:
-                H.nodes()[n]['color']='lightgrey'
-            if n[0]=='M':
-                H.nodes()[n]['shape']='o'
-            elif n[0]=='O':
-                H.nodes()[n]['shape']='s'
+                if labels_cap.get(x) is not None:
+                    string=string+"\nCap.="+str(labels_cap.get(x))
+                    
+                if labels_cost.get(x) is not None:    
+                    string=string+"\nCost="+str(labels_cost.get(x))
+                
+                labels1.update({x:string})
 
-        shape_list=[H.nodes()[n]['shape'] for n in H.nodes()]  
-        node_color_list=[H.nodes()[n]['color'] for n in H.nodes()]        
-        edge_color_list=[H[e[0]][e[1]]['color'] for e in H.edges()]    
-        
-        nodeShapes = set((aShape[1]["s"] for aShape in H.nodes(data = True)))
+            for e in H.edges():
+                if e[0] in all_node and e[1] in all_node:
+                    H[e[0]][e[1]]['color']='black'
+                else:
+                    H[e[0]][e[1]]['color']='lightgrey'
+                    
+            for n in H.nodes():
+                if n in all_node:
+                    H.nodes()[n]['color']='black'
+                else:
+                    H.nodes()[n]['color']='lightgrey'
+                if n[0]=='M':
+                    H.nodes()[n]['shape']='o'
+                elif n[0]=='O':
+                    H.nodes()[n]['shape']='s'
 
-        pos=pydot_layout(H,prog='dot')
-        pos2=pydot_layout(H,prog='dot')
-        
+            shape_list=[H.nodes()[n]['shape'] for n in H.nodes()]  
+            node_color_list=[H.nodes()[n]['color'] for n in H.nodes()]        
+            edge_color_list=[H[e[0]][e[1]]['color'] for e in H.edges()]    
+            
+            nodeShapes = set((aShape[1]["s"] for aShape in H.nodes(data = True)))
 
-        for key, (v1,v2) in pos2.items():
-            if key[0]=="O":
-                pos2[key]=(v1,v2-3)
-        pos=nx.rescale_layout_dict(pos,scale=rescale)
-        pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-        nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=3000,bbox=label_options,width=weights,font_size=10)
-        for aShape in nodeShapes:
-            node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
-            if aShape=="o":
-                node_size=3000
-            else:
-                node_size=6000
-            for node in node_list:
-                nx.draw_networkx_nodes(H,pos=pos2,node_color=H.nodes()[node]['color'],node_shape = aShape, nodelist =[node] ,node_size=node_size) 
-        
-        for key, values in nx.get_node_attributes(H,'type').items():
-            if values=="raw_material":
-                nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=1600)
-            elif values=="product":
-                nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=2000)
-                nx.draw_networkx_nodes(H,pos=pos,node_color=H.nodes()[key]['color'],node_shape = 'o', nodelist = [key],node_size=1250)
-                nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=750)
-        
-        nx.draw_networkx_edge_labels(H, pos=pos,edge_labels=labels)
-        ax= plt.gca()
-        plt.axis('off')
-        ax.autoscale()
+            pos=pydot_layout(H,prog='dot')
+            pos2=pydot_layout(H,prog='dot')
+            
 
-        ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
-        ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
-        if box:
-            ax.set_aspect('equal', adjustable='box')
-        ax.set_title("Solution #"+str(sol_num+1)+" Total Costs="+str(goolist[sol_num]),y=titlepos)
+            for key, (v1,v2) in pos2.items():
+                if key[0]=="O":
+                    pos2[key]=(v1,v2-3)
+            pos=nx.rescale_layout_dict(pos,scale=rescale)
+            pos2=nx.rescale_layout_dict(pos2,scale=rescale)
+            nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
+            for aShape in nodeShapes:
+                node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
+                if aShape=="o":
+                    node_size1=node_size
+                else:
+                    node_size1=node_size*2
+                for node in node_list:
+                    nx.draw_networkx_nodes(H,pos=pos2,node_color=H.nodes()[node]['color'],node_shape = aShape, nodelist =[node] ,node_size=node_size1) 
+            
+            for key, values in nx.get_node_attributes(H,'type').items():
+                if values=="raw_material":
+                    nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=node_size/3*1.6)
+                elif values=="product":
+                    nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=node_size/3*2)
+                    nx.draw_networkx_nodes(H,pos=pos,node_color=H.nodes()[key]['color'],node_shape = 'o', nodelist = [key],node_size=node_size/3*1.25)
+                    nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=node_size/3*0.75)
+            
+            nx.draw_networkx_edge_labels(H, pos=pos,edge_labels=labels)
+            ax= plt.gca()
+            plt.axis('off')
+            ax.autoscale()
+
+            ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
+            ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
+            if box:
+                ax.set_aspect('equal', adjustable='box')
+            ax.set_title("Solution #"+str(sol_num+1)+" Total Costs="+str(goolist[sol_num]),y=titlepos)
+            
+        if self.solver in ["SSG","MSG",0,1]:
+            for n in H.nodes():
+                if n[0]=="O":
+                    H.nodes[n]['s']=mpl.markers.MarkerStyle(marker='s', fillstyle='top')
+                else:
+                    H.nodes[n]['s']='o'
+            plt.rc('figure',figsize=figsize)
+            label_options = {"ec": "k", "fc": "white", "alpha": 0.8}
+            edges=H.edges()
+            weights = [H[u][v]['weight'] for u,v in edges]
+            labels = nx.get_edge_attributes(H,'weight')
+            labels={k:round(v,2) for k,v in labels.items()}
+
+            all_node=self.goplist[sol_num]+self.gmatlist[sol_num]
+                        
+            labels1={}
+            for x in all_node:
+                string=H.nodes()[x]['names']
+                labels1.update({x:string})
+            
+            for e in H.edges():
+                if e[0] in all_node and e[1] in all_node:
+                    H[e[0]][e[1]]['color']='black'
+                else:
+                    H[e[0]][e[1]]['color']='lightgrey'
+                    
+            for n in H.nodes():
+                if n in all_node:
+                    H.nodes()[n]['color']='black'
+                else:
+                    H.nodes()[n]['color']='lightgrey'
+                if n[0]=='M':
+                    H.nodes()[n]['shape']='o'
+                elif n[0]=='O':
+                    H.nodes()[n]['shape']='s'
+
+            shape_list=[H.nodes()[n]['shape'] for n in H.nodes()]  
+            node_color_list=[H.nodes()[n]['color'] for n in H.nodes()]        
+            edge_color_list=[H[e[0]][e[1]]['color'] for e in H.edges()]    
+            
+            nodeShapes = set((aShape[1]["s"] for aShape in H.nodes(data = True)))
+
+            pos=pydot_layout(H,prog='dot')
+            pos2=pydot_layout(H,prog='dot')
+            
+
+            for key, (v1,v2) in pos2.items():
+                if key[0]=="O":
+                    pos2[key]=(v1,v2-3)
+            pos=nx.rescale_layout_dict(pos,scale=rescale)
+            pos2=nx.rescale_layout_dict(pos2,scale=rescale)
+            nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
+            for aShape in nodeShapes:
+                node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
+                if aShape=="o":
+                    node_size1=node_size
+                else:
+                    node_size1=node_size*2
+                for node in node_list:
+                    nx.draw_networkx_nodes(H,pos=pos2,node_color=H.nodes()[node]['color'],node_shape = aShape, nodelist =[node] ,node_size=node_size1) 
+            
+            for key, values in nx.get_node_attributes(H,'type').items():
+                if values=="raw_material":
+                    nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'v', nodelist = [key],node_size=node_size/3*1.6)
+                elif values=="product":
+                    nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=node_size/3*2)
+                    nx.draw_networkx_nodes(H,pos=pos,node_color=H.nodes()[key]['color'],node_shape = 'o', nodelist = [key],node_size=node_size/3*1.25)
+                    nx.draw_networkx_nodes(H,pos=pos,node_color='white',node_shape = 'o', nodelist = [key],node_size=node_size/3*0.75)
+            
+            nx.draw_networkx_edge_labels(H, pos=pos,edge_labels=labels)
+            ax= plt.gca()
+            plt.axis('off')
+            ax.autoscale()
+
+            ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
+            ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
+            if box:
+                ax.set_aspect('equal', adjustable='box')
+            if sol_num==0:
+              ax.set_title("Maximal Structure",y=titlepos)  
+            ax.set_title("Solution Structure #"+str(sol_num+1),y=titlepos)
+            
+        
         return ax
     
-    def to_studio(self, path=None,verbose=False):
+    def to_studio(self, path=None,file_name="studio_file.pgsx",verbose=False):
+        '''
+        to_studio(path=None,file_name="studio_file.pgsx",verbose=False)
+        
+        Description
+        Convert the current status of the problem (with potential solutions) to .pgsx (P-graph Studio File). 
+        
+        Arguments
+        path: (string)(optional) Path of the expected output file. Default path is the directory of the file.
+        file_name: (string)(optional) Name of the file. Default is "studio_file.pgsx"
+        verbose: (boolean) Whether to print the content of the file.       
+        
+        '''
         
         G=self.G
         gmatlist=self.gmatlist
@@ -630,35 +861,35 @@ class Pgraph():
             for x in M:
                 etree.SubElement(MOP_list[-1],"OperatingUnit").text=x
             global_edge_count+=1
+        if self.solver in ["SSGLP","INSIDEOUT",2,3]:
+            # Solutions
+            Solutions=etree.SubElement(PGraph,"Solutions")
 
-        # Solutions
-        Solutions=etree.SubElement(PGraph,"Solutions")
+            ## Solution 
+            ssol_list=[]
+            smats_list=[]
+            sops_list=[]
+            sop_list=[]
 
-        ## Solution 
-        ssol_list=[]
-        smats_list=[]
-        sops_list=[]
-        sop_list=[]
-
-        for i in range(len(goolist)):
-            snum=i+1
-            attr={"Index":str(i), "Title":"Solution #"+str(snum), "OptimalValue":str(goolist[i]),"TotalTime":"0", "TotalMakespan":"0", "ObjectiveValue":str(goolist[i]), "AlgorithmUsed":"INSIDEOUT"}
-            ssol_list.append(etree.SubElement(Solutions,"Solutions",attrib=attr))
-            smats_list.append(etree.SubElement(ssol_list[-1],"Materials"))
-            for x in gmatlist[i]:
-                attr={"Name":x[0],"Flow":str(x[3]),"Cost":str(x[1]), "MU":""}
-                etree.SubElement(smats_list[-1],"Material",attrib=attr)
-            
-            sops_list.append(etree.SubElement(ssol_list[-1],"OperatingUnits"))
-            for x in goplist[i]:
-                attr={"Name":x[1],"Size":str(x[0]),"Cost":str(x[2]),"MU":""}
-                sop_list.append(etree.SubElement(sops_list[-1],"OperatingUnit",attrib=attr))
-                etree.SubElement(sop_list[-1],"Input")
-                etree.SubElement(sop_list[-1],"Output")
+            for i in range(len(goolist)):
+                snum=i+1
+                attr={"Index":str(i), "Title":"Solution #"+str(snum), "OptimalValue":str(goolist[i]),"TotalTime":"0", "TotalMakespan":"0", "ObjectiveValue":str(goolist[i]), "AlgorithmUsed":"INSIDEOUT"}
+                ssol_list.append(etree.SubElement(Solutions,"Solutions",attrib=attr))
+                smats_list.append(etree.SubElement(ssol_list[-1],"Materials"))
+                for x in gmatlist[i]:
+                    attr={"Name":x[0],"Flow":str(x[3]),"Cost":str(x[1]), "MU":""}
+                    etree.SubElement(smats_list[-1],"Material",attrib=attr)
+                
+                sops_list.append(etree.SubElement(ssol_list[-1],"OperatingUnits"))
+                for x in goplist[i]:
+                    attr={"Name":x[1],"Size":str(x[0]),"Cost":str(x[2]),"MU":""}
+                    sop_list.append(etree.SubElement(sops_list[-1],"OperatingUnit",attrib=attr))
+                    etree.SubElement(sop_list[-1],"Input")
+                    etree.SubElement(sop_list[-1],"Output")
                 
         xml=etree.tostring(PGraph,pretty_print=True,encoding='unicode', method='xml')
 
-        with open(path+"studio_file.pgsx","w") as f:
+        with open(path+file_name,"w") as f:
             f.write(header)
             f.write(xml)
         if verbose:
@@ -667,14 +898,62 @@ class Pgraph():
         return header+xml    
         
     def run(self,system=None,skip_wine=False):
-        self.convert_problem()
+        '''
+        run(system=None,skip_wine=False)
+        
+        Description
+        Create input, solve problem and read solution.
+        
+        Arguments
+        system: (string) (optional) Operating system. Options of "Windows", "Linux". MacOS is not supported yet. Specifying this makes function slightly faster.
+        skip_wine: (boolean) Only relevent for Linux. Skip the dependency "wine" if it is already installed. 
+        '''
+        self.create_solver_input()
         self.solve(system=system,skip_wine=skip_wine)
         self.read_solution()
         
     def get_info(self):
-        return self.gmatlist,self.goplist,self.goolist
+        '''
+        get_info()
+        
+        Description
+        Gets the material, operating unit and total costs information as a 3-element tuple. 
+        Different information is returned for (1) solvers with solutions (SSGLP, INSIDEOUT) and (2) solvers without solutions (SSG , MSG).
+        
+        Return
+        Material: 
+        (1) (DataFrame in list) This returns the materials name, flow and costs information in a DataFrame by solution number in list.
+        (2) (list in list) This returns all the materials names in list of a list arranged by solution number
+        OperatingUnit:
+        (1) (DataFrame in list) This returns the operating unit name, ratio and costs information in a DataFrame by solution number in list.
+        (2) (list in list) This returns all the operating unit names in list of a list arranged by solution number
+        TotalCosts:
+        (1) (DataFrame) This returns the total costs information in a DataFrame by solution number in list.
+        (2) (list) This returns total costs in a list arranged by solution number 
+        '''
+    
+        if self.solver in ["SSGLP","INSIDEOUT",2,3]:
+            OperatingUnit=[pd.DataFrame(x,columns=['Ratio','Names','Costs','Unit']).iloc[:,[1,0,2]] for x in self.goplist]
+            Materials=[pd.DataFrame(x,columns=['Names','Costs','MoneyUnit','Flow','FlowUnit']).iloc[:,[0,3,1]] for x in self.gmatlist]
+            TotalCosts=pd.DataFrame(self.goolist,columns=["Total Costs"])
+            TotalCosts.index.name='Solution Number'
+        else:
+            Materials=self.gmatlist
+            OperatingUnit=self.goplist
+            TotalCosts=self.goolist
+        return Materials,OperatingUnit,TotalCosts
     def get_sol_num(self):
-        return len(self.goolist)
+        '''
+        get_sol_num()
+        
+        Description
+        Get number of solutions generated by solver
+        
+        Return
+        num_sol: (int) Number of solutions
+        '''
+        num_sol=len(self.goolist)
+        return num_sol
 if __name__=="__main__":
     '''
     ##TEST1########################################
@@ -744,7 +1023,7 @@ if __name__=="__main__":
     G.add_node("M"+str(global_count),names="Prediction",type='product',price=100,flow_rate_lower_bound=0, flow_rate_upper_bound=10000)
 
     #### Step 2:  Setup Solver ####
-    P=Pgraph(problem_network=G,  solver="INSIDEOUT",max_sol=100)
+    P=Pgraph(problem_network=G,  solver="SSG",max_sol=100)
     ###############################
     ax1=P.plot_problem(figsize=(20,20))
 
@@ -754,9 +1033,17 @@ if __name__=="__main__":
     ####################
     #### Step 3.1: Plot Solution########
     total_sol_num=P.get_sol_num() 
-    for i in range(3): # Here we plot top 3 solutions
+    for i in range(1): # Here we plot top 3 solutions
         ax=P.plot_solution(sol_num=i,figsize=(20,20)) #Plot Solution Function
         #ax.set_xlim(-100,800)
         plt.show()
     #####################################  '''
     P.to_studio()
+    
+    
+    ##NEW FUNCTIONS #####
+    HH=P.get_solution_as_network(sol_num=1)
+    #print(HH.nodes())
+    
+    a,b,c=P.get_info()
+    print(a)

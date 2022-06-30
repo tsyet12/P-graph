@@ -15,7 +15,7 @@ if os.path.isfile(requirementPath):
         install_requires = f.read().splitlines()
 
 
-setup(name='Pgraph', 
+setup(name='ProcessGraph', 
 version='1.0', 
 license='BSD 2-Clause',
 description="Connecting Process Network Synthesis (PNS) to Modern Programming Ecosystems",
