@@ -130,6 +130,8 @@ Radboud University Nijmegen
 <!-- References -->
 ## References
 
+Teng, S.Y., Orosz, Á., How, B.S., Pimentel, J., Friedler, F. and Jansen, J.J., 2022. Framework to Embed Machine Learning Algorithms in P-graph: Communication from the Chemical Process Perspectives. Chemical Engineering Research and Design.
+
 Friedler, F., Tarjan, K., Huang, Y.W. and Fan, L.T., 1992. Graph-theoretic approach to process synthesis: axioms and theorems. Chemical Engineering Science, 47(8), pp.1973-1988.
 
 Friedler, F., Tarjan, K., Huang, Y.W. and Fan, L.T., 1992. Combinatorial algorithms for process synthesis. Computers & chemical engineering, 16, pp.S313-S320.
