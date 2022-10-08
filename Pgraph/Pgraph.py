@@ -739,7 +739,7 @@ class Pgraph():
                 Mats_list.append(n)
                 if 'type' in G.nodes()[n]:
                     type_ind=type_converter[G.nodes()[n]['type']]
-                    attr={"ID":str(list(G.nodes()).index(n)+1),"Name":n,"Type":str(type_ind)}
+                    attr={"ID":str(list(G.nodes()).index(n)+1),"Name":G.nodes()[n]["names"],"Type":str(type_ind)}
                     Mats_list.append(etree.SubElement(Materials,'Material',attrib=attr))
                     MPar_list.append(etree.SubElement(Mats_list[-1],'ParameterList'))
                     if 'price' in G.nodes()[n]:
@@ -823,7 +823,7 @@ class Pgraph():
         OPar_list=[]
         for n in G.nodes():
             if n[0]=="O":
-                attr={"ID":str(list(G.nodes()).index(n)+1),"Name":n,"Title":""}
+                attr={"ID":str(list(G.nodes()).index(n)+1),"Name":G.nodes()[n]["names"],"Title":""}
                 opu_list.append(etree.SubElement(OperatingUnits,'OperatingUnit', attrib=attr))
                 OPar_list.append(etree.SubElement(opu_list[-1],'ParameterList'))
                 if 'capacity_lower_bound' in G.nodes()[n]:
