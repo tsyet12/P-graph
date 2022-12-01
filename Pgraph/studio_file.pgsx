@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-16"?>
+<PGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Type="PNS" Visible="true" PeriodExtension="true">
+  <Default>
+    <Material>
+      <FlowRateLowerBound>0</FlowRateLowerBound>
+      <FlowRateUpperBound>1000000000</FlowRateUpperBound>
+      <Price>0</Price>
+      <Type>1</Type>
+      <Deadline>31536000</Deadline>
+      <EarliestAvability>0</EarliestAvability>
+      <StorageStrategy>default</StorageStrategy>
+    </Material>
+    <OperatingUnit>
+      <OperatingFixCost>0</OperatingFixCost>
+      <InvestmentFixCost>0</InvestmentFixCost>
+      <OpUnitFixCost>0</OpUnitFixCost>
+      <OperatingPropCost>0</OperatingPropCost>
+      <InvestmentPropCost>0</InvestmentPropCost>
+      <OpUnitPropCost>0</OpUnitPropCost>
+      <CapacityLowerBound>0</CapacityLowerBound>
+      <CapacityUpperBound>1000000000</CapacityUpperBound>
+      <PaybackPeriod>10</PaybackPeriod>
+      <WorkingHoursPerYear>8000</WorkingHoursPerYear>
+      <FixOperTime>0</FixOperTime>
+      <PropOperTime>0</PropOperTime>
+      <EarliestAvability>0</EarliestAvability>
+      <LatestAvability>31536000</LatestAvability>
+      <RelaxMode>strong</RelaxMode>
+    </OperatingUnit>
+    <Edge>
+      <FlowRate>1</FlowRate>
+    </Edge>
+    <Quantity>
+      <default_mes>gram (g)</default_mes>
+      <time_mu>y</time_mu>
+      <quant_type>Mass</quant_type>
+      <money_mu>EUR</money_mu>
+    </Quantity>
+    <SolverParameter>
+      <MakespanCoefficient>0</MakespanCoefficient>
+      <CostCoefficient>1</CostCoefficient>
+      <TimeCoefficient>0</TimeCoefficient>
+      <TotalCostLowerBound>-1000000000</TotalCostLowerBound>
+      <TotalCostUpperBound>1000000000</TotalCostUpperBound>
+    </SolverParameter>
+  </Default>
+  <Materials>
+    <Material ID="1" Name="combine" Type="1">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="0" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="2" Name="age" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="4" Name="sex" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="6" Name="bmi" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="8" Name="bp" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="10" Name="s1" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="12" Name="s2" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="14" Name="s3" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="16" Name="s4" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="18" Name="s5" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="20" Name="s6" Type="0">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="0" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="1" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+    <Material ID="23" Name="Prediction" Type="2">
+      <ParameterList>
+        <Parameter Name="price" Prefix="Price: " Value="100" Visible="false"/>
+        <Parameter Name="reqflow" Prefix="Required flow: " Value="0" Visible="false"/>
+        <Parameter Name="maxflow" Prefix="Maximum flow: " Value="10000" Visible="false"/>
+        <Parameter Name="quantitytype" Prefix="Quantity type: " Value="Mass" Visible="false"/>
+        <Parameter Name="measurementunit" Prefix="Measurement unit: " Value="gram (g)" Visible="false"/>
+      </ParameterList>
+    </Material>
+  </Materials>
+  <Edges>
+    <Edge ID="24" BeginID="2" EndID="3" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="25" BeginID="3" EndID="1" Rate="-0.00129097128059724" Title="-0.00129097128059724" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.00129097128059724">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="26" BeginID="1" EndID="5" Rate="0.07038017535259315" Title="0.07038017535259315" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="0.07038017535259315">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="27" BeginID="5" EndID="4" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="28" BeginID="6" EndID="7" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="29" BeginID="7" EndID="1" Rate="-0.4312251962637329" Title="-0.4312251962637329" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.4312251962637329">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="30" BeginID="8" EndID="9" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="31" BeginID="9" EndID="1" Rate="-0.25746704735601533" Title="-0.25746704735601533" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.25746704735601533">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="32" BeginID="1" EndID="11" Rate="0.06749885224867033" Title="0.06749885224867033" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="0.06749885224867033">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="33" BeginID="11" EndID="10" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="34" BeginID="1" EndID="13" Rate="0.10820265887404185" Title="0.10820265887404185" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="0.10820265887404185">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="35" BeginID="13" EndID="12" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="36" BeginID="1" EndID="15" Rate="0.17148366718034525" Title="0.17148366718034525" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="0.17148366718034525">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="37" BeginID="15" EndID="14" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="38" BeginID="16" EndID="17" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="39" BeginID="17" EndID="1" Rate="-0.09368365205852416" Title="-0.09368365205852416" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.09368365205852416">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="40" BeginID="18" EndID="19" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="41" BeginID="19" EndID="1" Rate="-0.37704934185899297" Title="-0.37704934185899297" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.37704934185899297">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="42" BeginID="20" EndID="21" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="43" BeginID="21" EndID="1" Rate="-0.06121633907840375" Title="-0.06121633907840375" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-0.06121633907840375">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="44" BeginID="1" EndID="22" Rate="1" Title="1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+    <Edge ID="45" BeginID="22" EndID="23" Rate="-1" Title="-1" ArrowOnCenter="true" ArrowPosition="50">
+      <Nodes/>
+      <Label Text="-1">
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+        <FontSize>-1</FontSize>
+        <Color>-16777216</Color>
+      </Label>
+      <Color>-16777216</Color>
+      <LongFormat>false</LongFormat>
+      <Comment/>
+      <CommentVisible>false</CommentVisible>
+    </Edge>
+  </Edges>
+  <OperatingUnits>
+    <OperatingUnit ID="3" Name="age" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="5" Name="sex" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="7" Name="bmi" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="9" Name="bp" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="11" Name="s1" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="13" Name="s2" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="15" Name="s3" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="17" Name="s4" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="19" Name="s5" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="21" Name="s6" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+    <OperatingUnit ID="22" Name="sum" Title="">
+      <ParameterList>
+        <Parameter Name="caplower" Prefix="Capacity, lower bound: " Value="-1" Visible="false"/>
+        <Parameter Name="capupper" Prefix="Capacity, upper bound: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostfix" Prefix="Investment cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="investcostprop" Prefix="Investment cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostfix" Prefix="Operating cost, fix: " Value="-1" Visible="false"/>
+        <Parameter Name="opercostprop" Prefix="Operating cost, proportional: " Value="-1" Visible="false"/>
+        <Parameter Name="workinghour" Prefix="Working hours per year: " Value="-1" Visible="false"/>
+        <Parameter Name="payoutperiod" Prefix="Payout Period: " Value="-1" Visible="false"/>
+      </ParameterList>
+    </OperatingUnit>
+  </OperatingUnits>
+  <MutualExclusions>
+    <MutualExclusion ID="46" Name="">
+      <OperatingUnits/>
+    </MutualExclusion>
+  </MutualExclusions>
+</PGraph>

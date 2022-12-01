@@ -346,25 +346,36 @@ class Pgraph():
             MS_M=False
             MS_O=False
             for i in range(len(lines)):
-            
                 #### maximal structure ####
                 if lines[i]=="Maximal Structure:": #enable trigger
                     MS_M=True
                     MS_O=True
                 if MS_M==True and lines[i][:9]=="Materials":
-                    gmatlist.append(lines[i+1].split(", "))
+                    if lines[i][9:]!="(0):":
+                        gmatlist.append(lines[i+1].split(", "))
+                    else:
+                        gmatlist.append([])
                     MS_M=False
                 if MS_O==True and lines[i][:15] =="Operating units":
-                    goplist.append(lines[i+1].split(", "))
+                    if lines[i][15:]!="(0):":
+                        goplist.append(lines[i+1].split(", "))
+                    else:
+                        goplist.append([])    
                     goolist.append(0)
                     MS_O=False
                 
                 if lines[i][:19]=="Solution structure ":
                     goolist.append(lines[i].split("#")[1][:-1]) #SSG number
                     if lines[i+1][:9]== "Materials":
-                        gmatlist.append(lines[i+2].split(", "))
+                        if lines[i+1][9:]!="(0):":
+                            gmatlist.append(lines[i+2].split(", "))
+                        else:
+                            gmatlist.append([])       
                     if lines[i+3][:15] =="Operating units":
-                        goplist.append(lines[i+4].split(", "))
+                        if lines[i+3][15:]!="(0):":
+                            goplist.append(lines[i+4].split(", "))
+                        else:
+                            goplist.append([])
             self.goplist=goplist
             self.gmatlist=gmatlist
             self.goolist=goolist
@@ -1041,7 +1052,7 @@ if __name__=="__main__":
     for i in range(1): # Here we plot top 3 solutions
         ax=P.plot_solution(sol_num=i,figsize=(20,20)) #Plot Solution Function
         #ax.set_xlim(-100,800)
-        plt.show()
+        #plt.show()
     #####################################  '''
     P.to_studio()
     
