@@ -139,6 +139,10 @@ Friedler, F., Tarjan, K., Huang, Y.W. and Fan, L.T., 1992. Combinatorial algorit
 Friedler, F., Tarjan, K., Huang, Y.W. and Fan, L.T., 1993. Graph-theoretic approach to process synthesis: polynomial algorithm for maximal structure generation. Computers & Chemical Engineering, 17(9), pp.929-942.
 
 
+## Acknowledgements
+The research contribution from S.Y. Teng is supported by the European Union's Horizon Europe Research and Innovation Program, under Marie Skłodowska-Curie Actions grant agreement no. 101064585 (MoCEGS).
+
+
 ## How to cite this software
 
 S.Y. Teng (2022). tsyet12/Pgraph: Process Graphs for Process Network Synthesis (PNS), Zenodo Release 2 (v1.0-zenodo-2). Zenodo. https://doi.org/10.5281/zenodo.6778354
