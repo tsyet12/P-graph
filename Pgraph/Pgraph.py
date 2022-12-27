@@ -10,7 +10,7 @@ import platform
 
 
 class Pgraph():
-    def __init__(self, problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100):
+    def __init__(self, problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100, input_file=None):
         ''' 
         Pgraph(problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100)
                 
@@ -39,6 +39,7 @@ class Pgraph():
         self.goplist=[]
         self.goolist=[]
         self.wine_installed=False #For Linux Only
+        self.input_file=input_file
         
     def plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True,node_size=3000):
         '''
@@ -236,7 +237,10 @@ class Pgraph():
             system=platform.system()
             
         if system=="Windows": #support for windows
-            rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
+            if type(self.input_file)==str:
+                rc=subprocess.run([path+"pgraph_solver.exe",solver, input_file, path+"test_out.out", str(max_sol)])
+            else self.input_file==None:
+                rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])                
         elif system=="Linux":
             #try installing dependencies
             if skip_wine==False and self.wine_installed==False:
