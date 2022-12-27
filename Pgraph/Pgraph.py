@@ -239,7 +239,7 @@ class Pgraph():
         if system=="Windows": #support for windows
             if type(self.input_file)==str:
                 rc=subprocess.run([path+"pgraph_solver.exe",solver, input_file, path+"test_out.out", str(max_sol)])
-            else self.input_file==None:
+            else:
                 rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])                
         elif system=="Linux":
             #try installing dependencies
