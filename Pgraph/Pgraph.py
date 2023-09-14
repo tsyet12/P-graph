@@ -776,7 +776,8 @@ class Pgraph():
                     etree.SubElement(MPar_list[-1],'Parameter',attrib={"Name":"maxflow", "Prefix":"Maximum flow: ", "Value":str(flow_rate_upper_bound), "Visible":"false"})
                     etree.SubElement(MPar_list[-1],'Parameter',attrib={"Name":"quantitytype", "Prefix":"Quantity type: ", "Value":"Mass", "Visible":"false"})
                     etree.SubElement(MPar_list[-1],'Parameter',attrib={"Name":"measurementunit", "Prefix":"Measurement unit: ", "Value":"gram (g)", "Visible":"false"})
-
+                    
+                    etree.SubElement(Mats_list[-1], 'Label',attrib={"Text":G.nodes()[n]["names"]})
         # Edges
         Edges=etree.SubElement(PGraph,"Edges")
 
@@ -866,7 +867,8 @@ class Pgraph():
                 etree.SubElement(OPar_list[-1],'Parameter',attrib={"Name":"opercostprop", "Prefix":"Operating cost, proportional: ", "Value":"-1", "Visible":"false"})
                 etree.SubElement(OPar_list[-1],'Parameter',attrib={"Name":"workinghour", "Prefix":"Working hours per year: ", "Value":"-1", "Visible":"false"})
                 etree.SubElement(OPar_list[-1],'Parameter',attrib={"Name":"payoutperiod", "Prefix":"Payout Period: ", "Value":"-1", "Visible":"false"})
-
+                
+                etree.SubElement(opu_list[-1], 'Label',attrib={"Text":G.nodes()[n]["names"]})
         # MutualExclusions
         MutualExclusions=etree.SubElement(PGraph,"MutualExclusions")
 
