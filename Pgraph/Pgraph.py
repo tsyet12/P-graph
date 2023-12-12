@@ -270,14 +270,6 @@ class Pgraph():
         #clean strings
         with open(path+"test_out.out","r") as f:
             lines = f.readlines()
-        for i in range(len(lines)-1,1,-1):
-            if lines[i][0]==" " or (len(lines[i].strip())>0 and ":" not in lines[i] and "," not in lines[i] and "= " not in lines[i] and "End." not in lines[i]): ## Attention for possible future changes
-                if lines[i-1][-3:]!="\n":
-                    lines[i-1]=lines[i-1].rstrip()+" "+lines[i].strip()
-                    lines[i]=""
-                else:
-                    lines[i-1]=lines[i-1][:-3].rstrip()+" "+lines[i].strip()
-                    lines[i]=""
         lines=list(map(lambda x:x.strip(),lines))
         lines=list(filter(None, lines))
         #Lines are now clean with next lines combined as elements of list.
@@ -347,39 +339,26 @@ class Pgraph():
         
         ###### Read for the case MSG ######
         if self.solver in ["MSG",0,"SSG",1]:
-            MS_M=False
-            MS_O=False
             for i in range(len(lines)):
                 #### maximal structure ####
-                if lines[i]=="Maximal Structure:": #enable trigger
-                    MS_M=True
-                    MS_O=True
-                if MS_M==True and lines[i][:9]=="Materials":
-                    if lines[i][9:]!="(0):":
-                        gmatlist.append(lines[i+1].split(", "))
+                if self.solver in ["MSG", 0] and lines[i]=="Maximal Structure:":
+                    if lines[i+1][9:]!="(0):":
+                        gmatlist.append(lines[i+2].split(", "))  # materials
+                        goplist.append(lines[i+4].split(", "))   # operating units
                     else:
                         gmatlist.append([])
-                    MS_M=False
-                if MS_O==True and lines[i][:15] =="Operating units":
-                    if lines[i][15:]!="(0):":
-                        goplist.append(lines[i+1].split(", "))
-                    else:
-                        goplist.append([])    
-                    goolist.append(0)
-                    MS_O=False
+                        goplist.append([])
+                    goolist.append("0")
                 
+                #### solution structure ####
                 if lines[i][:19]=="Solution structure ":
                     goolist.append(lines[i].split("#")[1][:-1]) #SSG number
-                    if lines[i+1][:9]== "Materials":
-                        if lines[i+1][9:]!="(0):":
-                            gmatlist.append(lines[i+2].split(", "))
-                        else:
-                            gmatlist.append([])       
-                    if lines[i+3][:15] =="Operating units":
-                        if lines[i+3][15:]!="(0):":
-                            goplist.append(lines[i+4].split(", "))
-                        else:
-                            goplist.append([])
+                    if lines[i+1][9:]!="(0):":
+                        gmatlist.append(lines[i+2].split(", "))  # materials
+                        goplist.append(lines[i+4].split(", "))   # operating units
+                    else:
+                        gmatlist.append([])
+                        goplist.append([])
             self.goplist=goplist
             self.gmatlist=gmatlist
             self.goolist=goolist
@@ -618,9 +597,11 @@ class Pgraph():
             ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
             if box:
                 ax.set_aspect('equal', adjustable='box')
-            if sol_num==0:
-              ax.set_title("Maximal Structure",y=titlepos)  
-            ax.set_title("Solution Structure #"+str(sol_num+1),y=titlepos)
+            sol_id = self.goolist[sol_num]
+            if sol_id=="0":
+                ax.set_title("Maximal Structure",y=titlepos)  
+            else:
+                ax.set_title("Solution Structure #"+sol_id,y=titlepos)
             
         
         return ax
