@@ -270,6 +270,16 @@ class Pgraph():
         #clean strings
         with open(path+"test_out.out","r") as f:
             lines = f.readlines()
+        for i in range(len(lines)-1,1,-1):
+            if lines[i-1].strip() == "Operating units(1):":
+                continue
+            if lines[i][0]==" " or (len(lines[i].strip())>0 and ":" not in lines[i] and "," not in lines[i] and "= " not in lines[i] and "End." not in lines[i]): ## Attention for possible future changes
+                if lines[i-1][-3:]!="\n":
+                    lines[i-1]=lines[i-1].rstrip()+" "+lines[i].strip()
+                    lines[i]=""
+                else:
+                    lines[i-1]=lines[i-1][:-3].rstrip()+" "+lines[i].strip()
+                    lines[i]=""
         lines=list(map(lambda x:x.strip(),lines))
         lines=list(filter(None, lines))
         #Lines are now clean with next lines combined as elements of list.
