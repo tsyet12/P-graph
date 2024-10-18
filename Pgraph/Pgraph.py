@@ -82,7 +82,7 @@ class Pgraph():
             
         pos=nx.rescale_layout_dict(pos,scale=rescale)
         pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-        nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=12)
+        nx.draw_networkx(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=12)
         for aShape in nodeShapes:
             if aShape=="o":
                 node_size1=node_size
@@ -511,7 +511,7 @@ class Pgraph():
                     pos2[key]=(v1,v2-3)
             pos=nx.rescale_layout_dict(pos,scale=rescale)
             pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-            nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
+            nx.draw_networkx(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
             for aShape in nodeShapes:
                 node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
                 if aShape=="o":
@@ -591,7 +591,7 @@ class Pgraph():
                     pos2[key]=(v1,v2-3)
             pos=nx.rescale_layout_dict(pos,scale=rescale)
             pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-            nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
+            nx.(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
             for aShape in nodeShapes:
                 node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
                 if aShape=="o":
