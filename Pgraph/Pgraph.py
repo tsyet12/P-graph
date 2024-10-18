@@ -7,7 +7,7 @@ from networkx.drawing.nx_pydot import pydot_layout
 from lxml import etree
 import networkx as nx
 import platform
-
+import pandas as pd
 
 class Pgraph():
     def __init__(self, problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100, input_file=None):
@@ -40,7 +40,30 @@ class Pgraph():
         self.goolist=[]
         self.wine_installed=False #For Linux Only
         self.input_file=input_file
-        
+    
+
+    def pgsx_to_G(self):
+        parser = etree.XMLParser(encoding='UTF-8')
+        tree = etree.parse(self.input_file, parser=parser)
+        root = tree.getroot()
+        #ALL
+        for child in root:
+            print(child.tag)
+        #Defaults
+        for child in root[0]  :
+            print(child.attrib)              
+        #Materials
+        for child in root[1]  :
+            print(child.attrib)   
+        #Edges
+        for child in root[2]  :
+            print(child.attrib)       
+        #Operating Units
+        for child in root[3]  :
+            print(child.attrib)       
+        #Mutual Exclusion
+        for child in root[4]  :
+            print(child.attrib)          
     def plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True,node_size=3000):
         '''
         plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True)
@@ -82,7 +105,7 @@ class Pgraph():
             
         pos=nx.rescale_layout_dict(pos,scale=rescale)
         pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-        nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=12)
+        nx.draw_networkx(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=12)
         for aShape in nodeShapes:
             if aShape=="o":
                 node_size1=node_size
@@ -237,10 +260,7 @@ class Pgraph():
             system=platform.system()
             
         if system=="Windows": #support for windows
-            if type(self.input_file)==str:
-                rc=subprocess.run([path+"pgraph_solver.exe",solver, input_file, path+"test_out.out", str(max_sol)])
-            else:
-                rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])                
+            rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])                
         elif system=="Linux":
             #try installing dependencies
             if skip_wine==False and self.wine_installed==False:
@@ -511,7 +531,7 @@ class Pgraph():
                     pos2[key]=(v1,v2-3)
             pos=nx.rescale_layout_dict(pos,scale=rescale)
             pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-            nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
+            nx.draw_networkx(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
             for aShape in nodeShapes:
                 node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
                 if aShape=="o":
@@ -1001,7 +1021,7 @@ if __name__=="__main__":
     P.to_studio(verbose=True)
     #####################################
     '''
-    
+    '''
     ## TEST 2 ###################
     from sklearn.datasets import load_diabetes
     from chemsy.predict import *
@@ -1057,7 +1077,8 @@ if __name__=="__main__":
         ax=P.plot_solution(sol_num=i,figsize=(20,20)) #Plot Solution Function
         #ax.set_xlim(-100,800)
         #plt.show()
-    #####################################  '''
+    ##################################### '''
+    '''
     P.to_studio()
     
     
@@ -1070,3 +1091,9 @@ if __name__=="__main__":
     
     
     #get_solution_as_network(1)
+    
+    '''
+    #G = nx.DiGraph()
+    #ppath=os.path.dirname(os.path.realpath(__file__))+r"/"
+    #P=Pgraph(problem_network=G, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100,input_file=ppath+"studio_file.pgsx")
+    #P.pgsx_to_G()
