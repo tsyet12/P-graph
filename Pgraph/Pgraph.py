@@ -1003,7 +1003,7 @@ if __name__=="__main__":
     P.to_studio(verbose=True)
     #####################################
     '''
-    
+    '''
     ## TEST 2 ###################
     from sklearn.datasets import load_diabetes
     from chemsy.predict import *
@@ -1060,6 +1060,7 @@ if __name__=="__main__":
         #ax.set_xlim(-100,800)
         #plt.show()
     #####################################  '''
+    '''
     P.to_studio()
     
     
@@ -1071,4 +1072,4 @@ if __name__=="__main__":
     a,b,c=P.get_info()
     
     
-    #get_solution_as_network(1)
+    #get_solution_as_network(1)'''

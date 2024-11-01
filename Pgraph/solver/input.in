@@ -9,53 +9,26 @@ money_unit=USD
 defaults:
 material_type=raw_material
 material_flow_rate_lower_bound=0
-material_flow_rate_upper_bound=10000
+material_flow_rate_upper_bound=10000000
 material_price=0
 operating_unit_capacity_lower_bound=0
-operating_unit_capacity_upper_bound=10000
+operating_unit_capacity_upper_bound=10000000
 operating_unit_fix_cost=0
 operating_unit_proportional_cost=0
 
 materials:
-M1: intermediate, flow_rate_lower_bound=0, flow_rate_upper_bound=0, price=0
-M2: raw_material, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M3: product, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M4: raw_material, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M5: raw_material, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M6: product, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M7: product, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M8: product, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M9: raw_material, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M10: raw_material, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M11: raw_material, flow_rate_lower_bound=0, flow_rate_upper_bound=1, price=0
-M13: product, price=100, flow_rate_lower_bound=0, flow_rate_upper_bound=10000
+M1: product, flow_rate_lower_bound=100
+M2: raw_material, price=200, flow_rate_lower_bound=1
+M3: raw_material, price=100, flow_rate_lower_bound=2
 
 operating_units:
-O2: 
-O3: 
-O4: 
-O5: 
-O6: 
-O7: 
-O8: 
-O9: 
-O10: 
-O11: 
-O12: 
+O1: fix_cost=2000, proportional_cost=400
+O2: fix_cost=1000, proportional_cost=400
 
 material_to_operating_unit_flow_rates:
-O2: 1 M2 => 0.00129097128059724 M1
-O3: 0.07038017535259315 M1 => 1 M3
-O4: 1 M4 => 0.4312251962637329 M1
-O5: 1 M5 => 0.25746704735601533 M1
-O6: 0.06749885224867033 M1 => 1 M6
-O7: 0.10820265887404185 M1 => 1 M7
-O8: 0.17148366718034525 M1 => 1 M8
-O9: 1 M9 => 0.09368365205852416 M1
-O10: 1 M10 => 0.37704934185899297 M1
-O11: 1 M11 => 0.06121633907840375 M1
-O12: 1 M1 => 1 M13
+O1: 2 M2 => 3 M1
+O2: 4 M3 => 1 M1
 
 mutually_exlcusive_sets_of_operating_units:
-ME0
+ME0: O1, O2
 
