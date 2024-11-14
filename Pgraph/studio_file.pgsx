@@ -167,10 +167,10 @@
     </OperatingUnit>
   </OperatingUnits>
   <MutualExclusions>
-    <MutualExclusion ID="10" Name="O1_O2">
+    <MutualExclusion ID="10" Name="Reactor_A_Reactor_B_O1_O2">
       <OperatingUnits>
-        <OperatingUnit>O1</OperatingUnit>
-        <OperatingUnit>O2</OperatingUnit>
+        <OperatingUnit>Reactor_A</OperatingUnit>
+        <OperatingUnit>Reactor_B</OperatingUnit>
       </OperatingUnits>
     </MutualExclusion>
   </MutualExclusions>
