@@ -20,6 +20,7 @@
 This project aims at enabling the classical P-graph Framework (www.p-graph.org) to interface with modern Python programming ecosystems. The backend solver is the original executable from P-graph, staying true to the original implementation of P-graph. For manual network manipulation, the P-graph studio can be downloaded from this link: https://p-graph.org/downloads/. 
 
 # Changelog
+14/11/2024: Due to update of P-graph studio, mutual exclusion is not properly processed. This is now fixed. Custom solvers can now also be selected for advanced users.
 18/10/2024: Due to update of networkx draw, older versions of Pgraph crashes when it draws the graph. This has now been fixed. Users now need to adjust axis size themselves.
 
 
