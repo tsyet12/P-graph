@@ -21,6 +21,7 @@ This project aims at enabling the classical P-graph Framework (www.p-graph.org) 
 
 # Changelog
 14/11/2024: Due to update of P-graph studio, mutual exclusion is not properly processed. This is now fixed. Custom solvers can now also be selected for advanced users.
+
 18/10/2024: Due to update of networkx draw, older versions of Pgraph crashes when it draws the graph. This has now been fixed. Users now need to adjust axis size themselves.
 
 
