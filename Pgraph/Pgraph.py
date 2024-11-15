@@ -7,7 +7,7 @@ from networkx.drawing.nx_pydot import pydot_layout
 from lxml import etree
 import networkx as nx
 import platform
-
+import pandas as pd
 
 class Pgraph():
     def __init__(self, problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100, input_file=None):
@@ -41,7 +41,7 @@ class Pgraph():
         self.wine_installed=False #For Linux Only
         self.input_file=input_file
         
-    def plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True,node_size=3000):
+    def plot_problem(self,figsize=(5,10),padding=0.25,titlepos=0.95,rescale=2,box=True,node_size=3000):
         '''
         plot_problem(self,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True)
                 
@@ -82,7 +82,7 @@ class Pgraph():
             
         pos=nx.rescale_layout_dict(pos,scale=rescale)
         pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-        nx.draw(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=12)
+        nx.draw_networkx(G, pos=pos, node_color='white',alpha=0.9,node_shape="o", edge_color='black',labels=node_labels, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=12)
         for aShape in nodeShapes:
             if aShape=="o":
                 node_size1=node_size
@@ -105,8 +105,8 @@ class Pgraph():
         ax= plt.gca()
         plt.axis('off')
         ax.autoscale()
-        ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
-        ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
+        ax.set_xlim([ax.get_xlim()[0]+padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
+        ax.set_ylim([ax.get_ylim()[0]+padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
         if box:
             ax.set_aspect('equal', adjustable='box')
         ax.set_title("Original Problem ",y=titlepos)
@@ -217,7 +217,7 @@ class Pgraph():
             for line in prelines:
                 f.write(line)
 
-    def solve(self,system=None,skip_wine=False):
+    def solve(self,system=None,skip_wine=False, solver_name='pgraph_solver.exe',path=None):
         '''
         solve(system=None,skip_wine=False)
         
@@ -227,20 +227,23 @@ class Pgraph():
         Arguments:
         system: (string) (optional) Operating system. Options of "Windows", "Linux". MacOS is not supported yet. Specifying this makes function slightly faster.
         skip_wine: (boolean) Only relevent for Linux. Skip the dependency "wine" if it is already installed. 
-        
+        solver_name= (string) For advanced users only. Choose your customized solver. 'pgraph_solver.exe' or 'pgraph_solver_new.exe'
+        path = (string) path to the custom solver. If None, then the default library installation path will be used.
         '''
-        path=self.path
+        if path==None:
+            path=self.path
         max_sol=self.max_sol
         solver=self.solver
         solver_dict={0:"MSG",1:"SSG",2:"SSGLP",3:"INSIDEOUT"}
+     
         if system==None:
             system=platform.system()
             
         if system=="Windows": #support for windows
             if type(self.input_file)==str:
-                rc=subprocess.run([path+"pgraph_solver.exe",solver, input_file, path+"test_out.out", str(max_sol)])
+                rc=subprocess.run([path+solver_name,solver, input_file, path+"test_out.out", str(max_sol)])
             else:
-                rc=subprocess.run([path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])                
+                rc=subprocess.run([path+solver_name,solver, path+"input.in", path+"test_out.out", str(max_sol)])                
         elif system=="Linux":
             #try installing dependencies
             if skip_wine==False and self.wine_installed==False:
@@ -250,7 +253,7 @@ class Pgraph():
                 os.system("apt-get update")
                 os.system("apt-get install wine32")
                 self.wine_installed=True
-            out_string=" ".join(["wine",path+"pgraph_solver.exe",solver, path+"input.in", path+"test_out.out", str(max_sol)])
+            out_string=" ".join(["wine",path+solver_name,solver, path+"input.in", path+"test_out.out", str(max_sol)])
             os.popen(out_string).read()
         ################
     
@@ -287,7 +290,7 @@ class Pgraph():
         ###### Read for the case of SSGLP and INSIDEOUT (ABB) ######
         if self.solver in ["SSGLP","INSIDEOUT",2,3]:
             mat_list=lines[1]
-            op_list=lines[3]
+            op_list=lines[3] 
             used_mat_list=lines[6] 
 
             #Find solutions via Feasible Structure tag
@@ -409,7 +412,7 @@ class Pgraph():
        
         return H
         
-    def plot_solution(self,sol_num=0,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True,node_size=3000):
+    def plot_solution(self,sol_num=0,figsize=(5,10),padding=0.25,titlepos=0.95,rescale=2,box=True,node_size=3000):
         '''
         plot_solution(sol_num=0,figsize=(5,10),padding=0,titlepos=0.95,rescale=2,box=True)
                 
@@ -500,7 +503,7 @@ class Pgraph():
                     pos2[key]=(v1,v2-3)
             pos=nx.rescale_layout_dict(pos,scale=rescale)
             pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-            nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
+            nx.draw_networkx(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
             for aShape in nodeShapes:
                 node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
                 if aShape=="o":
@@ -523,8 +526,8 @@ class Pgraph():
             plt.axis('off')
             ax.autoscale()
 
-            ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
-            ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
+            ax.set_xlim([ax.get_xlim()[0]+padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
+            ax.set_ylim([ax.get_ylim()[0]+padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
             if box:
                 ax.set_aspect('equal', adjustable='box')
             ax.set_title("Solution #"+str(sol_num+1)+" Total Costs="+str(goolist[sol_num]),y=titlepos)
@@ -580,7 +583,7 @@ class Pgraph():
                     pos2[key]=(v1,v2-3)
             pos=nx.rescale_layout_dict(pos,scale=rescale)
             pos2=nx.rescale_layout_dict(pos2,scale=rescale)
-            nx.draw(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
+            nx.draw_networkx(H, pos=pos,labels=labels1, node_color='white',alpha=0.9,node_shape='o', edge_color=edge_color_list, with_labels = True,node_size=node_size,bbox=label_options,width=weights,font_size=10)
             for aShape in nodeShapes:
                 node_list=[sNode[0] for sNode in filter(lambda x: x[1]["s"]==aShape,H.nodes(data = True))]
                 if aShape=="o":
@@ -603,16 +606,19 @@ class Pgraph():
             plt.axis('off')
             ax.autoscale()
 
-            ax.set_xlim([ax.get_xlim()[0]-padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
-            ax.set_ylim([ax.get_ylim()[0]-padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
+            ax.set_xlim([ax.get_xlim()[0]+padding*ax.get_xlim()[0],ax.get_xlim()[1]+padding*ax.get_xlim()[1]])
+            ax.set_ylim([ax.get_ylim()[0]+padding*ax.get_ylim()[0],ax.get_ylim()[1]+padding*ax.get_ylim()[1]])
             if box:
                 ax.set_aspect('equal', adjustable='box')
+
             sol_id = self.goolist[sol_num]
             if sol_id=="0":
                 ax.set_title("Maximal Structure",y=titlepos)  
             else:
                 ax.set_title("Solution Structure #"+sol_id,y=titlepos)
-            
+   
+            plt.tight_layout()
+
         
         return ax
     
@@ -866,12 +872,20 @@ class Pgraph():
         ## MutualExclusion
         ME_list=[]
         MOP_list=[]
+        
         for M in ME:
-            Name="_".join(M)
+            #New version P-graph studio change
+            nameM=[G.nodes()[mm]['names'].replace(" ", "_") for mm in M]
+            Name="_".join(nameM)+'_'+"_".join(M)
+            
+            
+            #Name="_".join(M)
+            
             attr={"ID":str(global_edge_count),"Name":Name}
             ME_list.append(etree.SubElement(MutualExclusions,"MutualExclusion",attrib=attr))
             MOP_list.append(etree.SubElement(ME_list[-1],"OperatingUnits"))
-            for x in M:
+            #for x in M:
+            for x in nameM:
                 etree.SubElement(MOP_list[-1],"OperatingUnit").text=x
             global_edge_count+=1
         if self.solver in ["SSGLP","INSIDEOUT",2,3]:
@@ -910,7 +924,7 @@ class Pgraph():
             print("Generated P-graph Studio File at ", path)
         return header+xml    
         
-    def run(self,system=None,skip_wine=False):
+    def run(self,system=None,skip_wine=False, solver_name='pgraph_solver.exe',path=None):
         '''
         run(system=None,skip_wine=False)
         
@@ -920,9 +934,11 @@ class Pgraph():
         Arguments
         system: (string) (optional) Operating system. Options of "Windows", "Linux". MacOS is not supported yet. Specifying this makes function slightly faster.
         skip_wine: (boolean) Only relevent for Linux. Skip the dependency "wine" if it is already installed. 
+        solver_name= (string) For advanced users only. Choose your customized solver. 'pgraph_solver.exe' or 'pgraph_solver_new.exe'
+        path = (string) path to the custom solver. If None, then the default library installation path will be used.
         '''
         self.create_solver_input()
-        self.solve(system=system,skip_wine=skip_wine)
+        self.solve(system=system,skip_wine=skip_wine,solver_name=solver_name,path=path)
         self.read_solutions()
         
     def get_info(self):
@@ -968,7 +984,7 @@ class Pgraph():
         num_sol=len(self.goolist)
         return num_sol
 if __name__=="__main__":
-    '''
+    
     ##TEST1########################################
     ### Prepare Network Structure #############
     G = nx.DiGraph()
@@ -982,19 +998,46 @@ if __name__=="__main__":
     G.add_edge("M2","O1", weight = 2)
     G.add_edge("M3","O2", weight = 4)
     ME=[["O1","O2"]]
-    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="INSIDEOUT",max_sol=100)
+    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="INSIDEOUT",max_sol=1)
     ax1=P.plot_problem()
     plt.show()
-    P.run()
+    P.run(solver_name='pgraph_solver.exe')
     total_sol_num=P.get_sol_num()
+    print(total_sol_num)
     for i in range(total_sol_num): #show all solutions in plot
         ax=P.plot_solution(sol_num=i)
+        
         plt.show()
     
     P.to_studio(verbose=True)
     #####################################
-    '''
     
+    '''
+    ##### STEP 1 : Problem Specification ######
+    G = nx.DiGraph()
+    G.add_node("M1",names="Product D",type='product',flow_rate_lower_bound=100, flow_rate_upper_bound=100)
+    G.add_node("M2",names="Chemical A",type='raw_material',price=200,flow_rate_lower_bound=0)
+    G.add_node("M3",names="Chemical B", type='raw_material',price=100,flow_rate_lower_bound=0)
+    G.add_node("M4",names="Chemical C", type='raw_material',price=10,flow_rate_lower_bound=0)
+    G.add_node("O1",names="Reactor 1",fix_cost=2000, proportional_cost=400)
+    G.add_node("O2", names="Reactor 2",fix_cost=1000, proportional_cost=400)
+    G.add_edge("M2","O1", weight = 1)
+    G.add_edge("M3","O2", weight = 1)
+    G.add_edge("M4","O2", weight = 2)
+    G.add_edge("O1","M1", weight = 0.7) 
+    G.add_edge("O2","M1", weight = 0.9) 
+    ME=[["O1","O2"]]  #Reactor 1 and Reactor 2 are mutually excluded. Only one can be chosen as solution.
+    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="MSG",max_sol=100)
+    ax1=P.plot_problem()
+    P.run(solver_name='pgraph_solver_new.exe')
+    plt.show()
+    total_sol_num=P.get_sol_num() 
+    for i in range(total_sol_num): # Here we loop through all the solutions to plot everything
+        ax=P.plot_solution(sol_num=i) #Plot Solution Function
+        plt.show()
+    #############################
+    '''
+    '''
     ## TEST 2 ###################
     from sklearn.datasets import load_diabetes
     from chemsy.predict import *
@@ -1050,7 +1093,10 @@ if __name__=="__main__":
         ax=P.plot_solution(sol_num=i,figsize=(20,20)) #Plot Solution Function
         #ax.set_xlim(-100,800)
         #plt.show()
-    #####################################  '''
+    #####################################  
+    
+    '''
+    '''
     P.to_studio()
     
     
@@ -1063,3 +1109,4 @@ if __name__=="__main__":
     
     
     #get_solution_as_network(1)
+    '''
