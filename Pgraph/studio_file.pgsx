@@ -174,18 +174,4 @@
       </OperatingUnits>
     </MutualExclusion>
   </MutualExclusions>
-  <Solutions>
-    <Solutions Index="0" Title="Solution #1" OptimalValue="28666.7" TotalTime="0" TotalMakespan="0" ObjectiveValue="28666.7" AlgorithmUsed="INSIDEOUT">
-      <Materials>
-        <Material Name="M1" Flow="100" Cost="-0" MU=""/>
-        <Material Name="M2" Flow="-66.6667" Cost="13333.3" MU=""/>
-      </Materials>
-      <OperatingUnits>
-        <OperatingUnit Name="O1" Size="33.3333" Cost="15333.3" MU="">
-          <Input/>
-          <Output/>
-        </OperatingUnit>
-      </OperatingUnits>
-    </Solutions>
-  </Solutions>
 </PGraph>

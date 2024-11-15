@@ -998,7 +998,7 @@ if __name__=="__main__":
     G.add_edge("M2","O1", weight = 2)
     G.add_edge("M3","O2", weight = 4)
     ME=[["O1","O2"]]
-    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="INSIDEOUT",max_sol=1)
+    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="SSG",max_sol=10)
     ax1=P.plot_problem()
     plt.show()
     P.run(solver_name='pgraph_solver.exe')
