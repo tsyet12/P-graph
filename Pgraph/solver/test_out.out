@@ -9,12 +9,16 @@ M1, M2, M3
 Operating units(2):
 O1, O2
 
-Feasible structure #1:
-Materials:
-M1 (-0 USD/y): 100 t/y
-M2 (13333.3 USD/y): -66.6667 t/y
-Operating units:
-33.3333*O1 (15333.3 USD/y): M2 (-66.6667 t/y) => M1 (100 t/y) 
-Total annual cost= 28666.7 USD/y
+Solution structure #1:
+Materials(2):
+M1, M2
+Operating units(1):
+O1
+
+Solution structure #2:
+Materials(2):
+M1, M3
+Operating units(1):
+O2
 
 End.
