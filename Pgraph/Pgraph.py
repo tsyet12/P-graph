@@ -7,7 +7,7 @@ from networkx.drawing.nx_pydot import pydot_layout
 from lxml import etree
 import networkx as nx
 import platform
-
+import pandas as pd
 
 class Pgraph():
     def __init__(self, problem_network, mutual_exclusion=[[]], solver="INSIDEOUT",max_sol=100, input_file=None):
@@ -217,7 +217,7 @@ class Pgraph():
             for line in prelines:
                 f.write(line)
 
-    def solve(self,system=None,skip_wine=False, solver_name='pgraph_solver.exe'):
+    def solve(self,system=None,skip_wine=False, solver_name='pgraph_solver.exe',path=None):
         '''
         solve(system=None,skip_wine=False)
         
@@ -228,9 +228,10 @@ class Pgraph():
         system: (string) (optional) Operating system. Options of "Windows", "Linux". MacOS is not supported yet. Specifying this makes function slightly faster.
         skip_wine: (boolean) Only relevent for Linux. Skip the dependency "wine" if it is already installed. 
         solver_name= (string) For advanced users only. Choose your customized solver. 'pgraph_solver.exe' or 'pgraph_solver_new.exe'
+        path = (string) path to the custom solver. If None, then the default library installation path will be used.
         '''
-        
-        path=self.path
+        if path==None:
+            path=self.path
         max_sol=self.max_sol
         solver=self.solver
         solver_dict={0:"MSG",1:"SSG",2:"SSGLP",3:"INSIDEOUT"}
@@ -929,7 +930,7 @@ class Pgraph():
             print("Generated P-graph Studio File at ", path)
         return header+xml    
         
-    def run(self,system=None,skip_wine=False):
+    def run(self,system=None,skip_wine=False, solver_name='pgraph_solver.exe',path=None):
         '''
         run(system=None,skip_wine=False)
         
@@ -939,9 +940,11 @@ class Pgraph():
         Arguments
         system: (string) (optional) Operating system. Options of "Windows", "Linux". MacOS is not supported yet. Specifying this makes function slightly faster.
         skip_wine: (boolean) Only relevent for Linux. Skip the dependency "wine" if it is already installed. 
+        solver_name= (string) For advanced users only. Choose your customized solver. 'pgraph_solver.exe' or 'pgraph_solver_new.exe'
+        path = (string) path to the custom solver. If None, then the default library installation path will be used.
         '''
         self.create_solver_input()
-        self.solve(system=system,skip_wine=skip_wine)
+        self.solve(system=system,skip_wine=skip_wine,solver_name=solver_name,path=path)
         self.read_solutions()
         
     def get_info(self):
@@ -1001,10 +1004,10 @@ if __name__=="__main__":
     G.add_edge("M2","O1", weight = 2)
     G.add_edge("M3","O2", weight = 4)
     ME=[["O1","O2"]]
-    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="INSIDEOUT",max_sol=100)
+    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="INSIDEOUT",max_sol=1)
     ax1=P.plot_problem()
     plt.show()
-    P.run()
+    P.run(solver_name='pgraph_solver.exe')
     total_sol_num=P.get_sol_num()
     print(total_sol_num)
     for i in range(total_sol_num): #show all solutions in plot
@@ -1015,6 +1018,31 @@ if __name__=="__main__":
     P.to_studio(verbose=True)
     #####################################
     
+    '''
+    ##### STEP 1 : Problem Specification ######
+    G = nx.DiGraph()
+    G.add_node("M1",names="Product D",type='product',flow_rate_lower_bound=100, flow_rate_upper_bound=100)
+    G.add_node("M2",names="Chemical A",type='raw_material',price=200,flow_rate_lower_bound=0)
+    G.add_node("M3",names="Chemical B", type='raw_material',price=100,flow_rate_lower_bound=0)
+    G.add_node("M4",names="Chemical C", type='raw_material',price=10,flow_rate_lower_bound=0)
+    G.add_node("O1",names="Reactor 1",fix_cost=2000, proportional_cost=400)
+    G.add_node("O2", names="Reactor 2",fix_cost=1000, proportional_cost=400)
+    G.add_edge("M2","O1", weight = 1)
+    G.add_edge("M3","O2", weight = 1)
+    G.add_edge("M4","O2", weight = 2)
+    G.add_edge("O1","M1", weight = 0.7) 
+    G.add_edge("O2","M1", weight = 0.9) 
+    ME=[["O1","O2"]]  #Reactor 1 and Reactor 2 are mutually excluded. Only one can be chosen as solution.
+    P=Pgraph(problem_network=G, mutual_exclusion=ME, solver="MSG",max_sol=100)
+    ax1=P.plot_problem()
+    P.run(solver_name='pgraph_solver_new.exe')
+    plt.show()
+    total_sol_num=P.get_sol_num() 
+    for i in range(total_sol_num): # Here we loop through all the solutions to plot everything
+        ax=P.plot_solution(sol_num=i) #Plot Solution Function
+        plt.show()
+    #############################
+    '''
     '''
     ## TEST 2 ###################
     from sklearn.datasets import load_diabetes
@@ -1071,7 +1099,9 @@ if __name__=="__main__":
         ax=P.plot_solution(sol_num=i,figsize=(20,20)) #Plot Solution Function
         #ax.set_xlim(-100,800)
         #plt.show()
-    #####################################  '''
+    #####################################  
+    
+    '''
     '''
     P.to_studio()
     
@@ -1084,4 +1114,5 @@ if __name__=="__main__":
     a,b,c=P.get_info()
     
     
-    #get_solution_as_network(1)'''
+    #get_solution_as_network(1)
+    '''
