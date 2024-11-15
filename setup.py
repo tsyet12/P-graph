@@ -16,7 +16,7 @@ if os.path.isfile(requirementPath):
 
 
 setup(name='ProcessGraph', 
-version='1.24', 
+version='1.25', 
 license='BSD 2-Clause',
 description="Connecting Process Network Synthesis (PNS) to Modern Programming Ecosystems",
 author='Sin Yong Teng',

@@ -17,12 +17,4 @@ Operating units:
 33.3333*O1 (15333.3 USD/y): M2 (-66.6667 t/y) => M1 (100 t/y) 
 Total annual cost= 28666.7 USD/y
 
-Feasible structure #2:
-Materials:
-M1 (-0 USD/y): 100 t/y
-M3 (40000 USD/y): -400 t/y
-Operating units:
-100*O2 (41000 USD/y): M3 (-400 t/y) => M1 (100 t/y) 
-Total annual cost= 81000 USD/y
-
 End.

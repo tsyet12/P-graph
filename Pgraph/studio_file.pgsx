@@ -187,17 +187,5 @@
         </OperatingUnit>
       </OperatingUnits>
     </Solutions>
-    <Solutions Index="1" Title="Solution #2" OptimalValue="81000" TotalTime="0" TotalMakespan="0" ObjectiveValue="81000" AlgorithmUsed="INSIDEOUT">
-      <Materials>
-        <Material Name="M1" Flow="100" Cost="-0" MU=""/>
-        <Material Name="M3" Flow="-400" Cost="40000" MU=""/>
-      </Materials>
-      <OperatingUnits>
-        <OperatingUnit Name="O2" Size="100" Cost="41000" MU="">
-          <Input/>
-          <Output/>
-        </OperatingUnit>
-      </OperatingUnits>
-    </Solutions>
   </Solutions>
 </PGraph>
