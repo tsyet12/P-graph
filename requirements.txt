@@ -1,5 +1,5 @@
 pydot
 graphviz
 matplotlib
-networkx==2.5.0
+networkx>=2.5.0
 lxml
